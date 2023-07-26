@@ -4,7 +4,7 @@
 .main{
     font-family: variables.$fuente;
     height: calc(100vh - 5rem);
-    background-image: linear-gradient(variables.$colorMain, variables.$colorMain-lighter), url('/img/portada.jpg');
+    background-image: linear-gradient(variables.$colorMain-gradient1, variables.$colorMain-gradient2), url('/img/portada.jpg');
     @include mixins.background-image;
     @include mixins.display-flex(center);
 

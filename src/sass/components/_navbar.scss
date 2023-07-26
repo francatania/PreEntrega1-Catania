@@ -8,7 +8,7 @@
     font-size: 1rem;
     @include mixins.display-flex(space-around);
 
-    &__logoContainer{
+    &__brandNameContainer{
         font-size: 2rem;
     }
 
@@ -18,7 +18,25 @@
         gap: 30px;
         list-style: none;
         }
-        &__itemLista{
-            // font-size: 1rem;   
+    &__itemLista{
+        transition: 0.5s;
+        position: relative;
     }
+    &__itemLista:hover{
+        transform: scale(1.1);
+    }
+    &__itemLista::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0; 
+        height: 2px; 
+        background-color: variables.$colorMain-lighter; 
+        transition: width 0.3s ease-in-out; 
+        transform-origin: left;
+      }
+    &__itemLista:hover::after{
+        width: 100%;
+    } 
 }
