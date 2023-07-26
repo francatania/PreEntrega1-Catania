@@ -1,0 +1,10 @@
+@mixin display-flex($justify){
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin background-image{
+    background-position: center;
+    background-size: cover;
+}

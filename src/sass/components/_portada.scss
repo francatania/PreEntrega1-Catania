@@ -1,0 +1,16 @@
+@use '../abstracts/variables' ;
+@use '../abstracts/mixins' ;
+
+.main{
+    font-family: variables.$fuente;
+    height: calc(100vh - 5rem);
+    background-image: linear-gradient(variables.$colorMain, variables.$colorMain-lighter), url('/img/portada.jpg');
+    @include mixins.background-image;
+    @include mixins.display-flex(center);
+
+    &__mainTittle{
+        font-size: 6rem;
+        color: variables.$colorMainTittle;
+        text-shadow: 2px 1px black;
+    }
+}
