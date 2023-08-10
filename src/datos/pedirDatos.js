@@ -15,7 +15,7 @@ export const pedirItemPorId = (id) =>{
 
         if(item){
             resolve(item)
-            console.log(item)
+            console.log(item + "probando")
         }  else{
             reject({
             error: "No se encontró el producto."
