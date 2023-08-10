@@ -10,7 +10,7 @@ export const pedirDatos = ()=>{
 export const pedirItemPorId = (id) =>{
     return new Promise((resolve, reject) =>{
         const item = data.find((el)=>{
-            el.id === id
+            el.id === parseInt(id)
         })
 
         if(item){

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export const Item = ({img, img2, nombre, precio, id }) =>{
 
@@ -22,7 +23,7 @@ export const Item = ({img, img2, nombre, precio, id }) =>{
             </div>
             <div className="card__actions">
                 <button className="agregarButton">Agregar</button>
-                <button className="verButton">Ver</button>
+                <Link to={`/item/${id}`}><button className="verButton">Ver</button></Link>
                 <h3>{id}</h3>
             </div>
         </div>
