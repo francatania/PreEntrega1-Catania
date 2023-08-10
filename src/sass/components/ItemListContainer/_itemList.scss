@@ -1,0 +1,13 @@
+@use '../../abstracts/variables' ;
+@use '../../abstracts/mixins' ;
+
+.itemList{
+    height: auto;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    justify-items: center;
+}

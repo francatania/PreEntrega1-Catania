@@ -1,3 +1,6 @@
 @use 'index.scss';
 @use './sass/components/navbar';
-@use './sass/components/portada';
+@use './sass/components/ItemListContainer/portada';
+@use './sass/components/ItemListContainer/itemList';
+@use './sass/components/ItemListContainer/item';
+@use './sass/components/ItemListContainer/itemListContainer';

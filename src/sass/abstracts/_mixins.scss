@@ -4,6 +4,13 @@
     justify-content: $justify;
 }
 
+@mixin display-flex-column($justify){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: $justify;
+}
+
 @mixin background-image{
     background-position: center;
     background-size: cover;

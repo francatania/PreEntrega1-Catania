@@ -1,0 +1,42 @@
+@use '../../abstracts/variables' ;
+@use '../../abstracts/mixins' ;
+
+.card{
+    height: 32rem;
+    width: 16rem;
+    background-color: variables.$colorMainTittle;
+    font-family: variables.$fuente;
+    border-radius: 2rem;
+    &__imgContainer{
+        height: 75%;
+    }
+    &__img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        background-color: variables.$colorMain-lighter;
+        border-radius:2rem ;
+    }
+    &__description{
+        height: 18%;
+        width: 100%;
+        @include mixins.display-flex-column(space-around);
+    }
+    &__priceProduct{
+        font-weight: bold;
+        font-size: 1.2rem
+    }
+    &__financing{
+        font-size: 0.8rem
+    }
+    &__actions{
+        @include mixins.display-flex(space-around);
+        button{
+            background-color: variables.$colorMain-lighter;
+            color: variables.$colorMainTittle;
+            height:2rem;
+            width: 4rem;
+            border-radius: 20%;
+        }
+    }
+}

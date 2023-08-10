@@ -1,9 +1,9 @@
-@use '../abstracts/variables' ;
-@use '../abstracts/mixins' ;
+@use '../../abstracts/variables' ;
+@use '../../abstracts/mixins' ;
 
 .main{
     font-family: variables.$fuente;
-    height: calc(100vh - 5rem);
+    height: calc(70vh);
     background-image: linear-gradient(variables.$colorMain-gradient1, variables.$colorMain-gradient2), url('/img/portadaResize.jpg');
     @include mixins.background-image;
     @include mixins.display-flex(center);
