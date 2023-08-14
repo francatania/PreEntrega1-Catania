@@ -2,6 +2,8 @@ import { ItemList } from "./ItemList"
 
 export const ItemListContainer = (props) =>{
     console.log(props)
+
+    
     return (
         <div className="itemListContainer">
             <div className="main">

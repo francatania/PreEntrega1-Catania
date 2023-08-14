@@ -2,25 +2,29 @@ import { useState } from "react"
 import { Item } from "./Item"
 import { useEffect } from "react"
 import data from '../datos/data.json'
-import { pedirDatos } from "../datos/pedirDatos"
+import { pedirDatos, pedirDatosCategoria } from "../datos/pedirDatos"
+import { useParams } from "react-router-dom"
 
 
 export const ItemList = () =>{
+
     const [prendas, setPrendas] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const categoria = useParams()
+    // console.log(categoria, "categoria")
 
 
     useEffect(()=>{
-        setTimeout(()=>{
-            pedirDatos().then((res) =>{
-                setPrendas(res)
-                setIsLoading(false)
-            },1000)}, [])
-    })
+            setTimeout(()=>{
+                pedirDatosCategoria(categoria.id).then((res) =>{
+                    setPrendas(res)
+                    setIsLoading(false)
+                })},1000)
+                }, [categoria])
 
 
     return(<>
-    {isLoading ? <div className="itemList">
+    {isLoading ? <div className="itemList itemList__loading">
         <h2>Cargando...</h2>
     </div>:
     <div className="itemList">

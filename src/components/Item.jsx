@@ -24,7 +24,6 @@ export const Item = ({img, img2, nombre, precio, id }) =>{
             <div className="card__actions">
                 <button className="agregarButton">Agregar</button>
                 <Link to={`/item/${id}`}><button className="verButton">Ver</button></Link>
-                <h3>{id}</h3>
             </div>
         </div>
     )

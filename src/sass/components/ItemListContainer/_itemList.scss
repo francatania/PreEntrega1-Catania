@@ -10,4 +10,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     justify-items: center;
+    &__loading{
+        height: 100vh;
+        h2{
+            margin: auto;
+            grid-column: 1/7;
+            font-family: variables.$fuente;
+            font-size: 2rem;
+        }
+    }
 }
+
