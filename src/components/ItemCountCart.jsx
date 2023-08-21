@@ -1,6 +1,7 @@
 import { useState, useContext } from "react"
 import { CartContext } from "../context/CartContext"
 
+
 export function ItemCountCart (producto){
 
     const {carrito} = useContext(CartContext)
