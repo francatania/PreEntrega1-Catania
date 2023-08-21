@@ -1,0 +1,30 @@
+@use '../../abstracts/variables' ;
+@use '../../abstracts/mixins' ;
+
+.accionesCarrito{
+    width: 70%;
+    margin: auto;
+    height: 7rem;
+    @include mixins.display-flex-column2(center, end);
+    font-size: 1rem;
+    gap: 2rem;
+    &__totales{
+        margin-top: 0.5rem;
+        margin-right: 0.2rem;
+    }
+    &__comprar{
+        height: 4rem;
+    }
+    &__comprarBtn{
+        height: 100%;
+        width: 6rem;
+        border-radius: .5rem;
+        background-color: variables.$colorBeige;
+        // color: variables.$colorMainTittle;
+        transition: 0.5s all ease;
+    }
+    &__comprarBtn:hover{
+        background-color: variables.$colorMain;
+        color: variables.$colorMainTittle;
+    }   
+}

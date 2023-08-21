@@ -1,7 +1,10 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { Link } from "react-router-dom"
+import { CartContext } from "../context/CartContext"
 
-export const Item = ({img, img2, nombre, precio, id }) =>{
+export const Item = ({img, img2, nombre, precio, id, agregar }) =>{
+
+    
 
     const [imgHover, setImgHover] = useState(img)
     const cambiarImg = () =>{
@@ -22,7 +25,7 @@ export const Item = ({img, img2, nombre, precio, id }) =>{
                 <div className="card__financing">6 cuotas sin interés de ${(precio/6).toFixed(2)}</div>
             </div>
             <div className="card__actions">
-                <button className="agregarButton">Agregar</button>
+                <button className="agregarButton" onClick={agregar}>Agregar</button>
                 <Link to={`/item/${id}`}><button className="verButton">Ver</button></Link>
             </div>
         </div>

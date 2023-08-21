@@ -8,7 +8,7 @@ export function ItemDetailContainer(){
         
     const [item, setItem] = useState({})
     const {id} = useParams()
-    console.log(id)
+    // console.log(id)
 
 
     useEffect(()=>{

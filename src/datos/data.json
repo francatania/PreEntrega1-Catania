@@ -1,72 +1,162 @@
 [{
     "id":1,
-    "img":"/public/img/prendasImg/buzoverde.jpg",
-    "img2":"/public/img/prendasImg/buzoverde2.jpg",
+    "img":"/img/prendasImg/buzoverde.jpg",
+    "img2":"/img/prendasImg/buzoverde2.jpg",
     "categoria":"abrigo",
+    "genero": "hombre",
     "nombre": "Buzo Yosemith",
     "precio":20000
 },
 {
     "id":2,
-    "img":"/public/img/prendasImg/buzocrema2.jpg",
-    "img2":"/public/img/prendasImg/buzocrema.jpg",
+    "img":"/img/prendasImg/buzocrema2.jpg",
+    "img2":"/img/prendasImg/buzocrema.jpg",
     "categoria":"abrigo",
+    "genero": "hombre",
     "nombre": "Buzo Highlands",
     "precio":18000 
 },
 {
     "id":3,
-    "img":"/public/img/prendasImg/buzonegro.jpg",
-    "img2":"/public/img/prendasImg/buzonegro2.jpg",
+    "img":"/img/prendasImg/buzonegro.jpg",
+    "img2":"/img/prendasImg/buzonegro2.jpg",
     "categoria":"abrigo",
+    "genero": "hombre",
     "nombre": "Buzo Jackson",
     "precio":21000   
 },
 {
     "id":4,
-    "img":"/public/img/prendasImg/remerablanca.jpg",
-    "img2":"/public/img/prendasImg/remerablanca.jpg",
+    "img":"/img/prendasImg/remerablanca.jpg",
+    "img2":"/img/prendasImg/remerablanca2.jpg",
     "categoria":"remera",
-    "nombre": "Remera lisa blanca",
-   "precio":9000  
+    "genero": "hombre",
+    "nombre": "Remera Longest Go North",
+   "precio":8199  
 },
 {
     "id":5,
-    "img":"/public/img/prendasImg/remeragris.jpg",
-    "img2":"/public/img/prendasImg/remeragris.jpg",
+    "img":"/img/prendasImg/remerahavefun.jpg",
+    "img2":"/img/prendasImg/remerahavefun2.jpg",
     "categoria":"remera",
-    "nombre": "Remera lisa gris",
-    "precio":9000   
+    "genero": "hombre",
+    "nombre": "Remera Have Fun",
+    "precio":6199   
 },
 {
     "id":6,
-    "img":"/public/img/prendasImg/remeracrema.jpg",
-    "img2":"/public/img/prendasImg/remeracrema.jpg",
+    "img":"/img/prendasImg/remeracrema.jpg",
+    "img2":"/img/prendasImg/remeracrema2.jpg",
     "categoria":"remera",
-    "nombre": "Remera lisa crema",
-    "precio":9000    
+    "genero": "hombre",
+    "nombre": "Remera Deserte",
+    "precio":8999    
 },
 {
     "id":7,
-    "img":"/public/img/prendasImg/zapatillasnegras.jpg",
-    "img2":"/public/img/prendasImg/zapatillasnegras.jpg",
+    "img":"/img/prendasImg/zapatillasnegras.jpg",
+    "img2":"/img/prendasImg/zapatillasnegras2.jpg",
     "categoria":"calzado",
+    "genero": "hombre",
     "nombre": "Zapatillas Tiziano Negras",
     "precio":21999  
 },
 {
     "id":8,
-    "img":"/public/img/prendasImg/zapatillasblancas.jpg",
-    "img2":"/public/img/prendasImg/zapatillasblancas.jpg",
+    "img":"/img/prendasImg/zapatillasblancas.jpg",
+    "img2":"/img/prendasImg/zapatillasblancas2.jpg",
     "categoria":"calzado",
+    "genero": "hombre",
     "nombre": "Zapatillas Berlin Blancas",
     "precio":25999  
 },
 {
     "id":9,
-    "img":"/public/img/prendasImg/zapatillasmarrones.jpg",
-    "img2":"/public/img/prendasImg/zapatillasmarrones.jpg",
+    "img":"/img/prendasImg/zapatillasmarrones.jpg",
+    "img2":"/img/prendasImg/zapatillasmarrones2.jpg",
     "categoria":"calzado",
+    "genero": "hombre",
     "nombre": "Zapatillas Alonzo Chocolate",
     "precio":23999  
+},
+{
+    "id":10,
+    "img":"/img/prendasImg/buzocorderito.jpg",
+    "img2":"/img/prendasImg/buzocorderito2.jpg",
+    "categoria":"abrigo",
+    "genero": "mujer",
+    "nombre": "Buzo Corderito",
+    "precio":28999  
+},
+{
+    "id":11,
+    "img":"/img/prendasImg/buzofrance.jpg",
+    "img2":"/img/prendasImg/buzofrance2.jpg",
+    "categoria":"abrigo",
+    "genero": "mujer",
+    "nombre": "Buzo France",
+    "precio":23999  
+},
+{
+    "id":12,
+    "img":"/img/prendasImg/buzorockies.jpg",
+    "img2":"/img/prendasImg/buzorockies2.jpg",
+    "categoria":"abrigo",
+    "genero": "mujer",
+    "nombre": "Buzo Rockies",
+    "precio":22999  
+},
+{
+    "id":13,
+    "img":"/img/prendasImg/remeramistery.jpg",
+    "img2":"/img/prendasImg/remeramistery2.jpg",
+    "categoria":"remera",
+    "genero": "mujer",
+    "nombre": "Remera Mistery",
+    "precio":8999  
+},
+{
+    "id":14,
+    "img":"/img/prendasImg/remerarufina.jpg",
+    "img2":"/img/prendasImg/remerarufina2.jpg",
+    "categoria":"remera",
+    "genero": "mujer",
+    "nombre": "Remera Rufina",
+    "precio":8699 
+},
+{
+    "id":15,
+    "img":"/img/prendasImg/remeratravel.jpg",
+    "img2":"/img/prendasImg/remeratravel2.jpg",
+    "categoria":"remera",
+    "genero": "mujer",
+    "nombre": "Remera Travel",
+    "precio":9199 
+},
+{
+    "id":16,
+    "img":"/img/prendasImg/zapatillasbrook.jpg",
+    "img2":"/img/prendasImg/zapatillasbrook2.jpg",
+    "categoria":"calzado",
+    "genero": "mujer",
+    "nombre": "Zapatillas Brook",
+    "precio":21999 
+},
+{
+    "id":17,
+    "img":"/img/prendasImg/zapatillaslonaroja.jpg",
+    "img2":"/img/prendasImg/zapatillaslonaroja2.jpg",
+    "categoria":"calzado",
+    "genero": "mujer",
+    "nombre": "Zapatillas Lona Roja Plataforma",
+    "precio":14699 
+},
+{
+    "id":18,
+    "img":"/img/prendasImg/zapatillaspenelope.jpg",
+    "img2":"/img/prendasImg/zapatillaspenelope2.jpg",
+    "categoria":"calzado",
+    "genero": "mujer",
+    "nombre": "Zapatillas Penelope",
+    "precio":17699 
 }]

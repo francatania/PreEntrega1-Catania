@@ -1,0 +1,81 @@
+@use '../../abstracts/variables' ;
+@use '../../abstracts/mixins' ;
+
+
+.carritoMain{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: variables.$colorMain;
+    display: flex;
+    font-family: variables.$fuente;
+    font-size: 0.8rem;
+    &__carritoContainer{
+        width: 70%;
+        max-height: 100vh;
+        height: auto;
+        margin: auto;
+        margin-top: 2rem;
+        min-height: 40rem;
+        border: solid 2px black;
+        border-radius: 1rem;
+        background-color: variables.$colorMainTittle;
+    }
+    &__wrapper{
+        @include mixins.display-flex-column(center);
+        height: 70%;
+        overflow: hidden;
+    }
+    
+    &__itemDescripcion{
+        @include mixins.display-flex(space-between);
+        height: 7rem;
+        width: 70%;
+        margin: auto;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    &__imgItem{
+        height: 100%;
+        // width: ;
+        object-fit: cover;
+    }
+    &__nombreYCantidad, &__eliminarYPrecio{
+        @include mixins.display-flex-column(center);
+        gap: 1rem;
+    }
+    &__eliminarYPrecio{
+        width: 75px;
+    }
+    &__eliminarDeCarrito{
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    &__eliminarDeCarrito:hover{
+        color: red;
+        transform: scale(1.2);
+    }
+    &__contadores{
+        @include mixins.display-flex(space-around);
+        width: 10rem;
+    }
+    &__restar, &__sumar{
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: variables.$colorMain;
+        color: variables.$colorMainTittle;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 2px variables.$colorMain solid;
+    }
+}
+
+.separador{
+    height: 3px;
+    width: 70%;
+    background-color: variables.$colorBeige;
+    border-radius: 40%;
+    margin: auto;
+}
+

@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import data from '../datos/data.json'
+import dataImg from '../datos/datacarousel.json'
 
 
 export const pedirDatos = ()=>{
@@ -30,11 +31,19 @@ export const pedirItemPorId = (id) =>{
         
         if(item){
             resolve(item)
-            // console.log(item + "probando")
+
         }  else{
             reject({
             error: "No se encontró el producto."
         })
         } 
+    })
+}
+
+export const pedirDatosCarousel = () =>{
+    return new Promise((resolve, reject) =>{
+        resolve(dataImg)
+        console.log(dataImg)
+        // reject(error)
     })
 }

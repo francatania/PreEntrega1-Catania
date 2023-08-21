@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { CartContext } from "../context/CartContext"
 import { Item } from "./Item"
 import { useEffect } from "react"
 import data from '../datos/data.json'
@@ -8,6 +9,7 @@ import { useParams } from "react-router-dom"
 
 export const ItemList = () =>{
 
+    const {carrito, agregar1AlCarrito} = useContext(CartContext)
     const [prendas, setPrendas] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const categoria = useParams()
@@ -29,7 +31,7 @@ export const ItemList = () =>{
     </div>:
     <div className="itemList">
         {prendas.map((prenda) =>{
-            return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id}/>
+            return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id} agregar ={()=> agregar1AlCarrito(prenda, 1)} />
         })}
     </div>
     }
