@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { ItemCount } from "./itemCount" 
+import { ItemCount } from "../components/ItemCount" 
 import { CartContext } from "../context/CartContext"
 
 export function ItemDetail({item}){
