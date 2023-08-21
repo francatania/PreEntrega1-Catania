@@ -1,14 +1,14 @@
+import { Carousel } from "./Carousel"
 import { ItemList } from "./ItemList"
 
 export const ItemListContainer = (props) =>{
-    console.log(props)
-
+    // console.log(props)
+    const ofertasCarousel = ["Hasta 6 cuotas sin interés", "Hacé ese regalo que tanto querés", "10% descuento en 3 cuotas sin interés"]
+    // console.log(ofertasCarousel)
     
     return (
         <div className="itemListContainer">
-            <div className="main">
-                <h2 className="main__mainTittle">{props.greeting}</h2>
-            </div>
+            <Carousel ofertas={ofertasCarousel}/>
             <ItemList/>
         </div>
     )

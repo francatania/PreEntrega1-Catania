@@ -1,0 +1,40 @@
+@use '../../abstracts/variables' ;
+@use '../../abstracts/mixins' ;
+
+.contadorContainer{
+    height: 10rem;
+    width: 70%;
+    @include mixins.display-flex-column(space-around);
+    &__contadores{
+        @include mixins.display-flex(space-around);
+        width: 100%;
+        margin-top: 2rem;
+    }
+    &__restar, &__sumar{
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: variables.$colorMain;
+        color: variables.$colorMainTittle;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 2px variables.$colorMain solid;
+    }
+    &__agregarCarrito{
+        width: 70%;
+        height: 2.5rem;
+        margin: auto;
+        font-family: variables.$fuente;
+        background-color: variables.$colorMain;
+        color: variables.$colorMainTittle;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 2px variables.$colorMain solid;
+    }
+
+    &__restar:hover, &__sumar:hover, &__agregarCarrito:hover{
+        transition: 0.5s;
+        background-color: variables.$colorMainTittle;
+        color: variables.$colorMain;
+    }
+}
