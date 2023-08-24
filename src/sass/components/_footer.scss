@@ -1,0 +1,49 @@
+@use '../abstracts/variables' ;
+@use '../abstracts/mixins' ;
+
+.footerContainer{
+    height: 20rem;
+    background-color: variables.$colorGris;
+    @include mixins.display-flex-column(center);
+    gap: 2rem;
+    &__brandFooter{
+        font-size: 2rem;
+    }
+    &__redesYContacto{
+        @include mixins.display-flex(center);
+        width: 20rem;
+        height: 5rem;
+        gap: 2rem
+    }
+    &__contacto{
+        @include mixins.display-flex-column(center);
+        width:50%;
+    }
+    &__whatsapp, &__ubicacion{
+        @include mixins.display-flex(center);
+        gap:1rem;
+        width: 100%;
+    }
+    &__numero,&__direccion{
+        width: 70%;
+    }
+    &__redes{
+        width: 50%;
+        @include mixins.display-flex(center);
+        font-size: 2rem;
+        gap: 1rem;
+    }
+    &__separador{
+        height: 100%;
+        width: 1px;
+        border: solid 1px black;
+    }
+    &__redIcon{
+        transition: 0.5s ease all;
+    }
+    &__redIcon:hover{
+        scale: 1.1;
+        color: variables.$colorMain;
+        cursor: pointer;
+    }
+}

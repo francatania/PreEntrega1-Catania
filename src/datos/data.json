@@ -5,7 +5,8 @@
     "categoria":"abrigo",
     "genero": "hombre",
     "nombre": "Buzo Yosemith",
-    "precio":20000
+    "precio":20000,
+    "colores":["Verde Oscuro", "Verde Agua"]
 },
 {
     "id":2,
@@ -14,7 +15,8 @@
     "categoria":"abrigo",
     "genero": "hombre",
     "nombre": "Buzo Highlands",
-    "precio":18000 
+    "precio":18000,
+    "colores":["Crema Claro","Crema Oscuro"]
 },
 {
     "id":3,
@@ -23,7 +25,8 @@
     "categoria":"abrigo",
     "genero": "hombre",
     "nombre": "Buzo Jackson",
-    "precio":21000   
+    "precio":21000,
+    "colores":["Negro"]
 },
 {
     "id":4,
@@ -32,7 +35,8 @@
     "categoria":"remera",
     "genero": "hombre",
     "nombre": "Remera Longest Go North",
-   "precio":8199  
+   "precio":8199,
+   "colores":["Blanco","Verde Agua"]
 },
 {
     "id":5,
@@ -41,7 +45,8 @@
     "categoria":"remera",
     "genero": "hombre",
     "nombre": "Remera Have Fun",
-    "precio":6199   
+    "precio":6199,
+    "colores":["Azul","Beige"]
 },
 {
     "id":6,
@@ -50,7 +55,8 @@
     "categoria":"remera",
     "genero": "hombre",
     "nombre": "Remera Deserte",
-    "precio":8999    
+    "precio":8999,
+    "colores":["Crema"]  
 },
 {
     "id":7,
@@ -59,7 +65,8 @@
     "categoria":"calzado",
     "genero": "hombre",
     "nombre": "Zapatillas Tiziano Negras",
-    "precio":21999  
+    "precio":21999,
+    "colores":["Negro"] 
 },
 {
     "id":8,
@@ -68,7 +75,8 @@
     "categoria":"calzado",
     "genero": "hombre",
     "nombre": "Zapatillas Berlin Blancas",
-    "precio":25999  
+    "precio":25999,
+    "colores":["Blanco"]
 },
 {
     "id":9,
@@ -77,7 +85,8 @@
     "categoria":"calzado",
     "genero": "hombre",
     "nombre": "Zapatillas Alonzo Chocolate",
-    "precio":23999  
+    "precio":23999,
+    "colores":["Marron"]
 },
 {
     "id":10,
@@ -86,7 +95,8 @@
     "categoria":"abrigo",
     "genero": "mujer",
     "nombre": "Buzo Corderito",
-    "precio":28999  
+    "precio":28999,
+    "colores":["Marron","Negro"]  
 },
 {
     "id":11,
@@ -95,7 +105,8 @@
     "categoria":"abrigo",
     "genero": "mujer",
     "nombre": "Buzo France",
-    "precio":23999  
+    "precio":23999,
+    "colores":["Azul","Crema"]
 },
 {
     "id":12,
@@ -104,7 +115,8 @@
     "categoria":"abrigo",
     "genero": "mujer",
     "nombre": "Buzo Rockies",
-    "precio":22999  
+    "precio":22999,
+    "colores":["Negro","Lila Claro"]  
 },
 {
     "id":13,
@@ -113,7 +125,8 @@
     "categoria":"remera",
     "genero": "mujer",
     "nombre": "Remera Mistery",
-    "precio":8999  
+    "precio":8999,
+    "colores":["Blanco","Verde Agua"]  
 },
 {
     "id":14,
@@ -122,7 +135,8 @@
     "categoria":"remera",
     "genero": "mujer",
     "nombre": "Remera Rufina",
-    "precio":8699 
+    "precio":8699,
+    "colores":["Blanco","Verde Agua"] 
 },
 {
     "id":15,
@@ -131,7 +145,8 @@
     "categoria":"remera",
     "genero": "mujer",
     "nombre": "Remera Travel",
-    "precio":9199 
+    "precio":9199,
+    "colores":["Blanco","Negro"] 
 },
 {
     "id":16,
@@ -140,7 +155,8 @@
     "categoria":"calzado",
     "genero": "mujer",
     "nombre": "Zapatillas Brook",
-    "precio":21999 
+    "precio":21999,
+    "colores":["Blanco y negro"] 
 },
 {
     "id":17,
@@ -149,7 +165,8 @@
     "categoria":"calzado",
     "genero": "mujer",
     "nombre": "Zapatillas Lona Roja Plataforma",
-    "precio":14699 
+    "precio":14699,
+    "colores":["Rojo"] 
 },
 {
     "id":18,
@@ -158,5 +175,6 @@
     "categoria":"calzado",
     "genero": "mujer",
     "nombre": "Zapatillas Penelope",
-    "precio":17699 
+    "precio":17699,
+    "colores":["Marron"] 
 }]

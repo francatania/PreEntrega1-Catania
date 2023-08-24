@@ -3,8 +3,10 @@ import { CartContext } from "../context/CartContext"
 import { Item } from "./Item"
 import { useEffect } from "react"
 import data from '../datos/data.json'
-import { pedirDatos, pedirDatosCategoria } from "../datos/pedirDatos"
+import { pedirDatosCategoria } from "../datos/pedirDatos"
 import { useParams } from "react-router-dom"
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../firebase/firebase"
 
 
 export const ItemList = () =>{
@@ -16,14 +18,31 @@ export const ItemList = () =>{
     // console.log(categoria, "categoria")
 
 
-    useEffect(()=>{
-            setTimeout(()=>{
-                pedirDatosCategoria(categoria.id).then((res) =>{
-                    setPrendas(res)
-                    setIsLoading(false)
-                })},1000)
-                }, [categoria])
+    // useEffect(()=>{
+    //         setTimeout(()=>{
+    //             pedirDatosCategoria(categoria.id).then((res) =>{
+    //                 setPrendas(res)
+    //                 setIsLoading(false)
+    //             })},1000)
+    //             }, [categoria])
 
+    useEffect(()=>{
+        
+        const productosRef = collection(db, "productos")
+        const q = categoria.id === undefined ? productosRef : query(productosRef, where("categoria", "==", categoria.id))
+
+
+        getDocs(q)
+            .then((resp) =>{
+                // console.log(resp.docs[15].data())
+                setPrendas(
+                    resp.docs.map((prod) =>{
+                        return {...prod.data(), id: prod.id}
+                    })
+                )
+                setIsLoading(false)
+            })
+    },[categoria])
 
     return(<>
     {isLoading ? <div className="itemList itemList__loading">
