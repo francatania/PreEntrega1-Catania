@@ -4,7 +4,7 @@
 
 .detailContainer{
     background-color: variables.$colorMain;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     font-family: variables.$fuente;
     @include mixins.display-flex(center);
@@ -45,6 +45,24 @@
     &__price{
         font-weight: bold;
         font-size: 1.5rem;
+        margin-top: 2rem
+    }
+    &__colores,&__talles{
+        @include mixins.display-flex(center);
+        width: 70%;
+        height: 3rem;
+        gap: 1rem;
+        h3{
+            width: 50%;
+        }
+    }
+    &__talles{
+        margin-top: 2rem;
+    }
+    &__opcionesColores, &__opcionesTalles{
+        width: 50%;
+        height: 100%;
+        border-radius: 5px;
     }
     @media screen and (max-height:800px){
         &__imgContainer, &__description{

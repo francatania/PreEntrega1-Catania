@@ -3,13 +3,13 @@ import data from '../datos/data.json'
 import dataImg from '../datos/datacarousel.json'
 
 
-export const pedirDatos = ()=>{
+// export const pedirDatos = ()=>{
 
-    return new Promise((resolve, reject) =>{
-        resolve(data)
-        console.log(data)
-    })
-}
+//     return new Promise((resolve, reject) =>{
+//         resolve(data)
+//         console.log(data)
+//     })
+// }
 
 export  const pedirDatosCategoria = (categoryId)=>{
     return new Promise ((resolve, reject) =>{

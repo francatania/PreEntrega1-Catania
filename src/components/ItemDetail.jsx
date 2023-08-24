@@ -1,10 +1,16 @@
 import { useContext, useEffect, useState } from "react"
+<<<<<<< HEAD
 import { ItemCount } from "../components/ItemCount" 
+=======
+import { ItemCount } from "../components/ItemCount"
+>>>>>>> 4e4ad73 (Se agregó el footer y se termino el itemDetail agregando talles y colores)
 import { CartContext } from "../context/CartContext"
+import { BotonAgregar } from "./BotonAgregar"
 
-export function ItemDetail({item}){
+export function ItemDetail({item, loading}){
 
     const {carrito, agregarAlCarrito} = useContext(CartContext)
+    const isLoading = loading
     console.log(carrito)
     const [imgDetail, setImgDetal] = useState("")
     const seleccionImg = (e) =>{
@@ -25,8 +31,10 @@ export function ItemDetail({item}){
         cantidad > 1 ? setCantidad(cantidad-1) : setCantidad(1)
     }
 
+    const talles = ["S", "M", "L", "XL", "XXL"]
 
-    return (
+    return (<>
+            { isLoading ? <div className="detailContainer"><div>Cargando</div> </div>:
             <div className="detailContainer">
                 <div className="detailContainer__imgContainer">
                     <div className="detailContainer__imgMain"><img src={imgDetail} alt="" /></div>
@@ -40,8 +48,27 @@ export function ItemDetail({item}){
                     <div className="detailContainer__text">{item.descripcion}</div>
                     <div className="detailContainer__price">${item.precio}</div>
                     <div className="detailContainer__financing">6 cuotas sin interés de ${(item.precio/6).toFixed(2)}</div>
-                    <ItemCount cantidad={cantidad} sumar={handleSumar} restar={handleRestar} agregar={() => { agregarAlCarrito(item, cantidad)}}/>
+                    <ItemCount cantidad={cantidad} sumar={handleSumar} restar={handleRestar} />
+                    <div className="detailContainer__colores"> 
+                        <h3>Color: </h3> 
+                        <select name="" id="" className="detailContainer__opcionesColores">
+                            {item.colores.map((color, index) =>{
+                                return <option value={color} key={index}>{color}</option>}
+                            )}        
+                        </select>
+                    </div>
+                    <div className="detailContainer__talles">
+                        <h3>Talle: </h3>
+                        <select name="" id="" className="detailContainer__opcionesTalles">
+                            {talles.map((talle, index) =>{
+                                return <option value={talle} key={index}>{talle}</option>
+                            })}
+                        </select>
+                    </div>
+                    <BotonAgregar agregar={() => { agregarAlCarrito(item, cantidad)}}/>
+
                 </div>
-            </div>
-    )
+            </div> }
+            
+            </>)
 }

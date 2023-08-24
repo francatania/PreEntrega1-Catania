@@ -1,6 +1,6 @@
-import { useState } from "react" 
 
-export function ItemCount ({cantidad, sumar, restar, agregar}){
+
+export function ItemCount ({cantidad, sumar, restar}){
 
 
     return <div className="contadorContainer">
@@ -9,6 +9,6 @@ export function ItemCount ({cantidad, sumar, restar, agregar}){
                     <p className="contadorContainer__cantidad">{cantidad}</p>
                     <button className="contadorContainer__sumar" onClick={sumar}>+</button>
                 </div>
-                <button className="contadorContainer__agregarCarrito" onClick={agregar}>Agregar al carrito</button>
+                
         </div>
 }

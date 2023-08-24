@@ -27,9 +27,9 @@
         transition: 0.5s;
         position: relative;
     }
-    &__itemLista:hover{
-        transform: scale(1.1);
-    }
+    // &__itemLista:hover{
+    //     transform: scale(1.1);
+    // }
     &__itemLista::after {
         content: '';
         position: absolute;
@@ -38,7 +38,7 @@
         width: 0; 
         height: 2px; 
         background-color: variables.$colorMain-lighter; 
-        transition: width 0.3s ease-in-out; 
+        transition: width 0.3s ; 
         transform-origin: left;
       }
     &__itemLista:hover::after{

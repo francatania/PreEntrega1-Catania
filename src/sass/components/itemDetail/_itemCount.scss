@@ -29,12 +29,15 @@
         color: variables.$colorMainTittle;
         cursor: pointer;
         transition: 0.5s;
-        border: 2px variables.$colorMain solid;
     }
-
-    &__restar:hover, &__sumar:hover, &__agregarCarrito:hover{
+    &__restar:hover, &__sumar:hover{
         transition: 0.5s;
         background-color: variables.$colorMainTittle;
         color: variables.$colorMain;
+    }
+    &__agregarCarrito:hover{
+        border-radius: 2rem;
+        background-color: variables.$colorMain;
+        color: variables.$colorMainTittle;
     }
 }

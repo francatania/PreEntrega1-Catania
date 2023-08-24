@@ -1,28 +1,32 @@
 import { useEffect, useState } from "react";
 import { ItemDetail } from "./ItemDetail";
-import { pedirDatos, pedirItemPorId } from "../datos/pedirDatos";
+import { pedirItemPorId } from "../datos/pedirDatos";
 import { useParams } from "react-router-dom";
-
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../firebase/firebase"
 export function ItemDetailContainer(){
 
         
     const [item, setItem] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
     const {id} = useParams()
     // console.log(id)
 
 
     useEffect(()=>{
-        pedirItemPorId(id)
-            .then((res)=>{
-                setItem(res)
+        const docRef = doc(db, "productos", id)
+        getDoc(docRef)
+            .then((resp) =>{
+                setItem(
+                    {...resp.data(), id: resp.id}
+                )
+                setIsLoading(false)
             })
-            .catch((error) => {
-                console.error(error.error);
-            });
+
         },[id])
 
 
     return <div>
-        {item && <ItemDetail item={item}/>}
+        {item && <ItemDetail item={item} loading={isLoading}/>}
         </div>
 }
