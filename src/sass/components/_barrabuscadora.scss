@@ -1,0 +1,29 @@
+@use '../abstracts/variables' ;
+@use '../abstracts/mixins' ;
+
+.buscadorContainer{
+    height: 2.5rem;
+    width: 50%;
+    @include mixins.display-flex(center);
+    &__input{
+        height: 100%;
+        width: 90%;
+        padding: 1rem;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+    }
+    &__input:focus{
+        outline: none;
+    }
+    &__iconContainer{
+        background-color: white;
+        height: 2.5rem;
+        @include mixins.display-flex(center);
+        width: 10%;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+    i:hover{
+        cursor: pointer;
+    }
+}

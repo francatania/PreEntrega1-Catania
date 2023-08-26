@@ -2,13 +2,15 @@
 @use '../abstracts/mixins' ;
 
 .nav{
+    
     background-color: variables.$colorNav;
     font-family: variables.$fuente;
-    height: 5rem;
+    height: 6.5rem;
     font-size: 1rem;
+    @include mixins.display-flex-column(center);
     &__navWidth{
         @include mixins.display-flex(space-between);
-        height: 100%;
+        height: 60%;
         width: 70%;
         margin: auto;
     }
@@ -27,9 +29,6 @@
         transition: 0.5s;
         position: relative;
     }
-    // &__itemLista:hover{
-    //     transform: scale(1.1);
-    // }
     &__itemLista::after {
         content: '';
         position: absolute;
@@ -43,5 +42,17 @@
       }
     &__itemLista:hover::after{
         width: 100%;
+    }
+    &__separadorNav{
+        height: 3px;
+        width: 70%;
+        margin: auto;
+        border-radius: 40%;
+        background-color: variables.$colorGris;
     } 
+    &__filtrosContainer{
+        background-color: variables.$colorNav;
+        height: 35%;
+        @include mixins.display-flex(center)
+    }
 }
