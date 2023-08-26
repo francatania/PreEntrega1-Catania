@@ -1,5 +1,7 @@
+import { BarraBuscadora } from "./BarraBuscadora"
 import { CartWidget } from "./CartWidget"
 import { Link } from "react-router-dom"
+import { FiltrosNav } from "./FiltrosNav"
 
 export const Navbar = () =>{
     return <nav className="nav">
@@ -9,17 +11,13 @@ export const Navbar = () =>{
                             Baboon Clothes
                         </div>
                     </Link>
+                    <BarraBuscadora/>
 
-                    <ul className="nav__listaNav">
-                        <Link to={'category/abrigo'}><li className="nav__itemLista">Abrigos</li></Link>
-                        <Link to={'category/remera'}><li className="nav__itemLista">Remeras</li></Link>
-                        <Link to={'category/calzado'}><li className="nav__itemLista">Calzado</li></Link>
-                    </ul>
                     <Link to={'/checkout'}>
                         <CartWidget></CartWidget>
                     </Link>
-                    
                 </div>
-                
+                <div className="nav__separadorNav"></div>
+                <FiltrosNav/>
             </nav>
 }

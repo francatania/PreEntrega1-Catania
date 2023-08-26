@@ -15,16 +15,7 @@ export const ItemList = () =>{
     const [prendas, setPrendas] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const categoria = useParams()
-    // console.log(categoria, "categoria")
 
-
-    // useEffect(()=>{
-    //         setTimeout(()=>{
-    //             pedirDatosCategoria(categoria.id).then((res) =>{
-    //                 setPrendas(res)
-    //                 setIsLoading(false)
-    //             })},1000)
-    //             }, [categoria])
 
     useEffect(()=>{
         

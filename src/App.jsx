@@ -8,6 +8,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer'
 import { CartContext, CartProvider } from './context/CartContext'
 import { Carrito } from './components/Carrito'
 import { Footer } from './components/Footer'
+import { Busqueda } from './components/Busqueda'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Route path='/' element={<ItemListContainer greeting="Bienvenido"/>}/>
             <Route path='item/:id' element={<ItemDetailContainer/>}/>
             <Route path='category/:id' element={<ItemListContainer/>}/>
+            <Route path ='search/:busqueda' element={<Busqueda/>}/>
             <Route path='/checkout' element={<Carrito/>}/>
           </Routes>
           <Footer/>
