@@ -22,20 +22,23 @@ export function Busqueda(){
                 })
             )
         })
-    }, [busqueda])
+    }, [])
 
 
 
     const resultado = prendas.filter(producto=> producto.nombre.toLowerCase().includes(busqueda.busqueda))
     
     return <>
-        <div className="itemList">
-            <div className="itemList__tituloBusquedaContainer">
+        <div className="itemListSearch">
+            <div className="itemListSearch__tituloBusquedaContainer">
                 <h2>Resultado de búsqueda</h2>
             </div>
-            {resultado.map((prenda) =>{
-                return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id} agregar ={()=> agregar1AlCarrito(prenda, 1)} />
-            })}
+            <div className="itemList">
+                {resultado.map((prenda) =>{
+                    return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id} agregar ={()=> agregar1AlCarrito(prenda, 1)} />
+                })}
+            </div>
+
         </div>
     </>
 }

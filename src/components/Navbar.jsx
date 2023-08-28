@@ -13,7 +13,7 @@ export const Navbar = () =>{
                     </Link>
                     <BarraBuscadora/>
 
-                    <Link to={'/checkout'}>
+                    <Link to={'/carrito'}>
                         <CartWidget></CartWidget>
                     </Link>
                 </div>

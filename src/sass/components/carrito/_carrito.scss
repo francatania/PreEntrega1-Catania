@@ -10,20 +10,27 @@
     display: flex;
     font-family: variables.$fuente;
     font-size: 0.8rem;
+    @include mixins.display-flex-column(center);
+    &__tituloCarrito{
+        font-size: 1.4rem;
+        color: variables.$colorMainTittle;
+        margin-top: 1rem;
+        width: 70%;
+        @include mixins.display-flex(start)
+    }
     &__carritoContainer{
         width: 70%;
         max-height: 100vh;
-        height: auto;
+        height: 40rem;
         margin: auto;
-        margin-top: 2rem;
-        min-height: 40rem;
-        border: solid 2px black;
-        border-radius: 1rem;
+        margin-top: 1rem;
+        // border: solid 2px black;
+        // border-radius: 1rem;
         background-color: variables.$colorMainTittle;
     }
     &__wrapper{
         @include mixins.display-flex-column(center);
-        height: 70%;
+        height: 10rem;
         overflow: hidden;
     }
     
@@ -37,7 +44,6 @@
     }
     &__imgItem{
         height: 100%;
-        // width: ;
         object-fit: cover;
     }
     &__nombreYCantidad, &__eliminarYPrecio{
@@ -68,6 +74,10 @@
         cursor: pointer;
         transition: 0.5s;
         border: 2px variables.$colorMain solid;
+    }
+    &__filasContainer{
+        height: 80%;
+        overflow-x: hidden;
     }
 }
 
