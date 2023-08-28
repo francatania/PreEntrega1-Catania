@@ -1,0 +1,12 @@
+@use '../abstracts/variables' ;
+@use '../abstracts/mixins' ;
+
+.itemListSearch{
+    @include mixins.display-flex-column(center);
+    background-color: variables.$colorMain;
+    &__tituloBusquedaContainer{
+        color: variables.$colorMainTittle;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+}
