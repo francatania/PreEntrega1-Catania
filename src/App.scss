@@ -2,6 +2,7 @@
 @use './sass/components/navbar';
 @use './sass/components/barrabuscadora';
 @use './sass/components/footer';
+@use './sass/components/busqueda';
 @use './sass/components/ItemListContainer/portada';
 @use './sass/components/ItemListContainer/itemList';
 @use './sass/components/ItemListContainer/item';
@@ -11,3 +12,4 @@
 @use './sass/components/ItemListContainer/carousel';
 @use './sass/components/carrito/carrito';
 @use './sass/components/carrito/totalComprar';
+@use './sass/components/checkout/checkout';

@@ -26,5 +26,6 @@
     &__comprarBtn:hover{
         background-color: variables.$colorMain;
         color: variables.$colorMainTittle;
+        cursor: pointer;
     }   
 }
