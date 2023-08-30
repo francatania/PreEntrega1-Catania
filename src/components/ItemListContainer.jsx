@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { Carousel } from "./Carousel"
 import { ItemList } from "./ItemList"
 import { Busqueda } from "./Busqueda"
+import { ItemListMain } from "./ItemListMain"
 
 export const ItemListContainer = (props) =>{
 
@@ -11,7 +12,7 @@ export const ItemListContainer = (props) =>{
     return (
         <div className="itemListContainer">
             <Carousel ofertas={ofertasCarousel}/>
-            <ItemList/>
+            <ItemListMain/>
 
         </div>
     )

@@ -88,4 +88,11 @@
             color: variables.$colorMainTittle;
         }
     }
+    &__mensajeCompra{
+        @include mixins.display-flex-column(center);
+        gap: 2rem;
+        h3{
+            font-size: 0.8rem;
+        }
+    }
 }

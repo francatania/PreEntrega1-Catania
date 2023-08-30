@@ -1,0 +1,27 @@
+import { Link } from "react-router-dom";
+
+export function ItemListMain(){
+    return <div className="itemListMain">
+        <div className="itemListMain__container">
+            <div className="itemListMain__modelos">
+                <div className="itemListMain__hombreContainer">
+                    <h3 className="itemListMain__h3">Hombre</h3>
+                    <div className="itemListMain__hombre">
+                        
+                    </div>
+                </div>
+                <div className="itemListMain__mujerContainer">
+                <h3 className="itemListMain__h3">Mujer</h3>
+                    <div className="itemListMain__mujer"></div>
+                </div>
+            </div>
+            
+            <div className="itemListMain__mostrarTodoContainer">
+                <h3 className="itemListMain__h3 itemListMain__h3verTodo">Ver todo</h3>
+                <Link to={'/todo'}><div className="itemListMain__mostrarTodo"></div></Link>
+            </div>
+
+
+        </div>
+    </div>
+}

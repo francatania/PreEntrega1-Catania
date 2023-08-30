@@ -2,8 +2,11 @@ import { BarraBuscadora } from "./BarraBuscadora"
 import { CartWidget } from "./CartWidget"
 import { Link } from "react-router-dom"
 import { FiltrosNav } from "./FiltrosNav"
+import { useParams } from "react-router-dom"
 
 export const Navbar = () =>{
+    const parametros = useParams()
+    console.log(parametros.id)
     return <nav className="nav">
                 <div className="nav__navWidth">
                     <Link to={'/'} >
