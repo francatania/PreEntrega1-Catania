@@ -41,6 +41,10 @@ export const CartProvider = ({children}) =>{
       return carrito.reduce((acc, prod) => acc += prod.cantidad, 0)
     }
 
+    const vaciarCarrito = () =>{
+      setCarrito([])
+    }
+
     useEffect(()=>{
         localStorage.setItem("carrito", JSON.stringify(carrito))
     }, [carrito])
@@ -51,7 +55,8 @@ export const CartProvider = ({children}) =>{
         agregarAlCarrito, 
         agregarNumeroCarrito, 
         agregar1AlCarrito, 
-        eliminarDeCarrito}}>
+        eliminarDeCarrito,
+        vaciarCarrito}}>
         {children}
     </CartContext.Provider>
   

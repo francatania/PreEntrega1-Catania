@@ -1,0 +1,87 @@
+@use '../../abstracts/variables' ;
+@use '../../abstracts/mixins' ;
+
+.itemListMain{
+    width: 100%;
+    @include mixins.display-flex(center);
+    &__container{
+        width: 70%;
+        height: 70rem;
+        margin: auto;
+        @include mixins.display-flex-column(center);
+    }
+    &__modelos{
+        width: 100%;
+        height: 40rem;
+        @include mixins.display-flex(center);
+    }
+    &__hombreContainer,&__mujerContainer{
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        background-color: black;
+        position: relative;
+    }
+    &__mostrarTodoContainer{
+        position: relative;
+    }
+    &__hombre{
+        background-image: url(/public/img/generos/modeloHombre.jpg);
+
+    }
+    &__mujer{
+        background-image: url(/public/img/generos/modeloMujer.jpg);
+    }
+    &__mostrarTodoContainer{
+        width: 100%;
+        height: 20rem;
+        background-image: url(/public/img/generos/mostrarTodo.jpg);
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+    &__mostrarTodo{
+        background-image: url(/public/img/generos/mostrarTodo.jpg);
+    }
+    &__hombre,&__mujer,&__mostrarTodo{
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        filter: brightness(100%);
+        transition: all 0.5s ease;
+        @include mixins.display-flex(end);
+
+    }
+    &__mostrarTodo{
+        @include mixins.display-flex(center);
+    }
+
+    &__h3{
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        z-index: 9999;
+        font-size: 3rem;
+        font-weight: 300;
+        // font-style: italic;
+        color: variables.$colorMainTittle;
+        transition: all 0.5s ease;
+    }
+    &__h3verTodo{
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    &__hombre:hover,&__mujer:hover,&__mostrarTodo:hover{
+        transform: scale(1.1);
+        filter: brightness(60%);
+        cursor: pointer;
+    }
+    &__hombreContainer:hover,&__mujerContainer:hover,&__mostrarTodoContainer:hover{
+        h3{
+            top: 45%;}
+    }
+
+}

@@ -10,6 +10,7 @@ import { Carrito } from './components/Carrito'
 import { Footer } from './components/Footer'
 import { Busqueda } from './components/Busqueda'
 import { Checkout } from './components/Checkout'
+import { ItemList } from './components/ItemList'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
             <Route path ='search/:busqueda' element={<Busqueda/>}/>
             <Route path='/carrito' element={<Carrito/>}/>
             <Route path='/checkout' element={<Checkout/>}/>
+            <Route path='/todo' element={<ItemList/>}/>
           </Routes>
           <Footer/>
         </BrowserRouter>

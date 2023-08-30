@@ -39,11 +39,14 @@ export const ItemList = () =>{
     {isLoading ? <div className="itemList itemList__loading">
         <h2>Cargando...</h2>
     </div>:
-    <div className="itemList">
+    <div className="itemListContainer">
+            <div className="itemList">
         {prendas.map((prenda) =>{
             return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id} agregar ={()=> agregar1AlCarrito(prenda, 1)} />
         })}
+        </div>
     </div>
+
     }
     </>)
 }

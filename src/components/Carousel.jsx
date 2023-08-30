@@ -4,7 +4,7 @@ export function Carousel (props){
     const images =['/img/carousel/maincall1.jpg','/img/carousel/maincall2.jpg','/img/carousel/maincall3.jpg']
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [selectedImage, setSelectedImage] = useState(images[0])
-    const [loaded, setLoaded] = useState(false)
+    const [loaded, setLoaded] = useState(true)
     const [oferta, setOferta] = useState(props.ofertas[0])
     const [ofertaLoaded, setOfertaLoaded] = useState(false)
 
