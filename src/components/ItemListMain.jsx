@@ -6,13 +6,13 @@ export function ItemListMain(){
             <div className="itemListMain__modelos">
                 <div className="itemListMain__hombreContainer">
                     <h3 className="itemListMain__h3">Hombre</h3>
-                    <div className="itemListMain__hombre">
+                    <Link to={'/hombre'}><div className="itemListMain__hombre"></div></Link>
                         
-                    </div>
+                    
                 </div>
                 <div className="itemListMain__mujerContainer">
                 <h3 className="itemListMain__h3">Mujer</h3>
-                    <div className="itemListMain__mujer"></div>
+                    <Link to={'/mujer'}><div className="itemListMain__mujer"></div></Link>
                 </div>
             </div>
             
