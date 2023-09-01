@@ -4,7 +4,7 @@ import {getFirestore} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuratio
 
 const apiKey = import.meta.env.VITE_apiKey
 const authDomain = import.meta.env.VITE_authDomain
