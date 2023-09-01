@@ -1,9 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-<<<<<<< HEAD
-import { ItemCount } from "../components/ItemCount" 
-=======
 import { ItemCount } from "../components/ItemCount"
->>>>>>> 4e4ad73 (Se agregó el footer y se termino el itemDetail agregando talles y colores)
 import { CartContext } from "../context/CartContext"
 import { BotonAgregar } from "./BotonAgregar"
 
