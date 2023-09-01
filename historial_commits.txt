@@ -1,0 +1,107 @@
+commit e75e3629666c6b9565bb53bb95be6e9efbf46a7e
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Thu Aug 31 18:32:00 2023 -0300
+
+    Se agregaron media queries en itemDetail
+
+commit 70511a64392d8b60a10e3687e8f9d7409a0a54c8
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Wed Aug 30 22:44:06 2023 -0300
+
+    Se arregló el boton 'agregar' en ItemListGender
+
+commit a6d05cce39121de2822d2c9bcb5ebf743ede217f
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Wed Aug 30 22:17:39 2023 -0300
+
+    Se modifico el tamaño de los divs hombre, mujer y vertodo
+
+commit 6a63c97a6447f12433c80c5fd549374066303e94
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Wed Aug 30 20:55:28 2023 -0300
+
+    Se termino el formulario de pago y se agrego el componente ItemListMain
+
+commit 63f306931eb65d2bf2a3251360377f409ac5f51b
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Mon Aug 28 18:20:05 2023 -0300
+
+    Se creó el componente checkout con su respectivo css
+
+commit 80d28ea61db024c25471e5e2551847f3c31af7e0
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Mon Aug 28 13:46:47 2023 -0300
+
+    Se agrega estilos al componente Busqueda
+
+commit be3d57f3e2a65e96c2948a60586b4ba7442ed080
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Fri Aug 25 21:07:02 2023 -0300
+
+    Se agregó una barra buscadora, se creo el componente BarraBuscadora, Busqueda y FiltrosNav. Ademas se hizo la conexion a una nueva bd de firestore ya que se consumio toda la cuota debido a no poner la funcion getDocs de Busqueda dentro de un useEffect
+
+commit 4e4ad73796c4f4eba123a4a6c592321de4f001c4
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Thu Aug 24 20:53:07 2023 -0300
+
+    Se agregó el footer y se termino el itemDetail agregando talles y colores
+
+commit 501dff4a99f1c08db21ffc92d8074005f91b1e7d
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Tue Aug 22 18:34:40 2023 -0300
+
+    Se agregó localStorage al carrito y se creo el archivo netlify.toml para arreglar errores de enrutamiento en Netlify
+
+commit e7ca99ce04603eadf8d201b16997d097650b3d4a
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Mon Aug 21 15:27:01 2023 -0300
+
+    Cambie la ruta de itemCount
+
+commit 03cdf9a8e55f8c9469a848b2b1096ef0f57c62f4
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Mon Aug 21 15:02:17 2023 -0300
+
+    Se hizo un carousel y se creó el componente Carrito
+
+commit 2ac7c5a9d0e9df3c98a876f676e59252d1f5055e
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Sun Aug 13 21:07:11 2023 -0300
+
+    Se termino la segunda preentrega. Agregadas rutas, detalle de producto y filtro en la navbar
+
+commit b338d37045de58bb775dda91755bb012ea1ec35f
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Thu Aug 10 16:31:52 2023 -0300
+
+    Cambios con ayuda del tutor
+
+commit fe8a880b7ffc31853b459457ca53cf1d7c3438d3
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Thu Aug 10 16:04:05 2023 -0300
+
+    Se hizo la ruta de item dinamica con /item/:id
+
+commit b430efba624affda1594caa60122161c3f8f95f3
+Author: Franco Catania <francocatania93@gmail.com>
+Date:   Thu Aug 10 15:48:17 2023 -0300
+
+    Cambios para segunda entrega
+
+commit 73fc41c1ad7fc1f4a9bac086afaf5f91a86f3cdc
+Author: franco <francocatania93@gmail.com>
+Date:   Thu Jul 27 17:29:25 2023 -0300
+
+    Se hizo un resize de la img portada debido a que era muy pesada y tardaba en cargar
+
+commit 7cbe3a6618cc6ed2cad4de69cd4b0ec4c8668223
+Author: franco <francocatania93@gmail.com>
+Date:   Wed Jul 26 20:35:38 2023 -0300
+
+    Terminada primera pre entrega
+
+commit 324e1c4a5d72725371213142377bbf61379e1ddf
+Author: franco <francocatania93@gmail.com>
+Date:   Wed Jul 26 19:30:12 2023 -0300
+
+    Primer commit
