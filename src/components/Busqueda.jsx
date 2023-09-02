@@ -11,6 +11,7 @@ export function Busqueda(){
     const [prendas, setPrendas] = useState([])
     const busqueda = useParams()
     const productosRef = collection(db, "productos")
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(()=>{
         
@@ -21,10 +22,9 @@ export function Busqueda(){
                     return {...prod.data(), id: prod.id}
                 })
             )
+            setIsLoading(false)
         })
     }, [])
-
-
 
     const resultado = prendas.filter(producto=> producto.nombre.toLowerCase().includes(busqueda.busqueda))
     
@@ -33,11 +33,21 @@ export function Busqueda(){
             <div className="itemListSearch__tituloBusquedaContainer">
                 <h2>Resultado de búsqueda</h2>
             </div>
-            <div className="itemList">
-                {resultado.map((prenda) =>{
-                    return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id} agregar ={()=> agregar1AlCarrito(prenda, 1)} />
-                })}
-            </div>
+            {isLoading ? <div className="itemListSearch__loading">
+                <h3>Cargando...</h3>
+            </div> 
+            :resultado.length > 0 ? <div className="itemList">
+                                                {resultado.map((prenda) =>{
+                                                    return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id} agregar ={()=> agregar1AlCarrito(prenda, 1)} />
+                                                })}
+                                    </div>
+                                    : 
+                                    <div className="itemListSearch__notFoundContainer">
+                                        <h3>No se encontraron productos para "{busqueda.busqueda}"</h3>
+                                    </div>
+                                    }
+                    
+            
 
         </div>
     </>

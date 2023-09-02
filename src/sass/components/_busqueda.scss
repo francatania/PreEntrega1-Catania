@@ -2,11 +2,24 @@
 @use '../abstracts/mixins' ;
 
 .itemListSearch{
-    @include mixins.display-flex-column(center);
+    @include mixins.display-flex-column2(space-between, center);
     background-color: variables.$colorMain;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
     &__tituloBusquedaContainer{
         color: variables.$colorMainTittle;
         margin-top: 2rem;
         font-size: 1.5rem;
+    }
+    &__notFoundContainer{
+        height: 10rem;
+        position: absolute;
+        top: 30%;
+        padding: 2rem;
+        border-radius: 2rem;
+        @include mixins.display-flex(center);
+        background-color: variables.$colorMainTittle;
+        color: variables.$colorMain;
     }
 }
