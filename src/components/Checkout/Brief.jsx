@@ -33,7 +33,7 @@ export function Brief(){
                                                 <h3 className="carritoMain__precio">$ {producto.precio * producto.cantidad}</h3>
                                             </div>
                                         </div>
-                                        <div className="separador"></div>
+                                        <div className="separador" key={producto.id}></div>
                                     </div>)
                         })}
                     </div>

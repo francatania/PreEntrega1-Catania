@@ -5,6 +5,6 @@ export const CartWidget = () =>{
     const {agregarNumeroCarrito} = useContext(CartContext)
 
     return <div className="nav__carritoContainer">
-                <a href="" className="nav__carritoLink"><i className="fa-solid fa-cart-shopping"></i> {agregarNumeroCarrito()}</a>
+                <i className="fa-solid fa-cart-shopping nav__carritoLink"></i> {agregarNumeroCarrito()}
             </div>
 }

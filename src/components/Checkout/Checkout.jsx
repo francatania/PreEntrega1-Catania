@@ -16,7 +16,7 @@ export function Checkout(){
 
     return <div className="checkoutContainer">
         <div className="checkoutContainer__ruta">
-            <h3><Link to={'/carrito'}><a href="">Carrito {'>>'}</a></Link> <span>Pago</span> </h3>
+            <h3><Link to={'/carrito'}>Carrito {'>>'}</Link> <span>Pago</span> </h3>
         </div>
         <div className="checkoutContainer__brief">
             <Brief/>

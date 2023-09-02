@@ -69,7 +69,7 @@ export function FormularioPago({calcularTotal}){
                     <div className="checkoutContainer__fechaVencimiento">
                         <div className="checkoutContainer__month">
                             <select id="vencimiento" name="vencimiento" required {...register("Mes vencimiento")}>
-                                <option value="" disabled selected>MM</option>
+                                <option value="" disabled>MM</option>
                                 <option value="1">01</option>
                                 <option value="2">02</option>
                                 <option value="3">03</option>
@@ -86,7 +86,7 @@ export function FormularioPago({calcularTotal}){
                         </div>
                         <div className="checkoutContainer__year">
                             <select id="año" name="año" required {...register("Año vencimiento")}>
-                                    <option value="" disabled selected>AAAA</option>
+                                    <option value="" disabled>AAAA</option>
                                     <option value="2023">2023</option>
                                     <option value="2024">2024</option>
                                     <option value="2025">2025</option>
@@ -104,7 +104,7 @@ export function FormularioPago({calcularTotal}){
 
                     <div className="checkoutContainer__cuotas">
                         <select id="cuotas" name="cuotas" required {...register("Cuotas")}>
-                            <option value="" disabled selected>Cuotas</option>
+                            <option value="" disabled>Cuotas</option>
                             <option value="1">x1 ${calcularTotal}</option>
                             <option value="3">x3 ${(calcularTotal)/3}</option>
                             <option value="6">x6 ${(calcularTotal)/6}</option>

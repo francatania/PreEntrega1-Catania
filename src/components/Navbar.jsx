@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom"
 
 export const Navbar = () =>{
     const parametros = useParams()
-    console.log(parametros.id)
     return <nav className="nav">
                 <div className="nav__navWidth">
                     <Link to={'/'} >

@@ -36,7 +36,6 @@ export function Carousel (props){
             setSelectedImage(array[nextIndex])
             setSelectedIndex(nextIndex)
             switchOferta(nextIndex)
-            console.log(oferta)
         },200)
 
     }    
@@ -48,9 +47,6 @@ export function Carousel (props){
     const next = () =>{
         selectNewImage(selectedIndex, images, true)
     }
-
-
-    console.log(images[0].imgSrc)
 
     return <div className='containerImg'>
                     <img src={selectedImage} alt="" className={loaded ? "containerImg__img containerImg__active" : "containerImg__img" } onLoad={() => setLoaded(true)} />
