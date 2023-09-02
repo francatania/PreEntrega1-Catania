@@ -18,7 +18,7 @@ export const Item = ({img, img2, nombre, precio, id, agregar }) =>{
     }
 
     const agregarYNotificar = () =>{
-        agregar
+        agregar()
         toast.success('Agregado!', {
             position: "top-right",
             autoClose: 1000,
