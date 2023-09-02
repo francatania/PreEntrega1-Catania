@@ -3,6 +3,8 @@ import { ItemQuantitySelector } from "./ItemQuantitySelector"
 import { CartContext } from "../../context/CartContext"
 import { AddItemButton } from "./AddItemButton"
 import { Description } from "./Description"
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 export function ItemDetail({item, loading}){
 
@@ -26,6 +28,21 @@ export function ItemDetail({item, loading}){
         cantidad > 1 ? setCantidad(cantidad-1) : setCantidad(1)
     }
 
+    const agregarYNotificar = () =>{
+        agregarAlCarrito(item, cantidad)
+        toast.success('Agregado!', {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            backgroundColor: "black"
+            });
+    }
+
     
 
     return (<>
@@ -42,8 +59,8 @@ export function ItemDetail({item, loading}){
                     <Description item={item}>
                         <ItemQuantitySelector cantidad={cantidad} sumar={handleSumar} restar={handleRestar} />
                     </Description>
-                    <AddItemButton agregar={() => { agregarAlCarrito(item, cantidad)}}/>
-
+                    <AddItemButton agregar={() => { agregarYNotificar()}}/>
+                    <ToastContainer />
                 </div>
             </div> }
             

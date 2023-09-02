@@ -15,6 +15,7 @@ export const ItemList = () =>{
     const [prendas, setPrendas] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const categoria = useParams()
+    
 
 
     useEffect(()=>{
@@ -25,7 +26,6 @@ export const ItemList = () =>{
 
         getDocs(q)
             .then((resp) =>{
-                // console.log(resp.docs[15].data())
                 setPrendas(
                     resp.docs.map((prod) =>{
                         return {...prod.data(), id: prod.id}
@@ -42,7 +42,7 @@ export const ItemList = () =>{
     <div className="itemListContainer">
             <div className="itemList">
         {prendas.map((prenda) =>{
-            return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id} agregar ={()=> agregar1AlCarrito(prenda, 1)} />
+            return <Item key={prenda.id} img={prenda.img} img2={prenda.img2} nombre={prenda.nombre} precio={prenda.precio} id={prenda.id} agregar ={()=> agregar1AlCarrito(prenda, 1) } />
         })}
         </div>
     </div>
