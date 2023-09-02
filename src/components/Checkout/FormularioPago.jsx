@@ -19,8 +19,6 @@ export function FormularioPago({calcularTotal}){
             productos: carrito,
             total: calcularTotal
         }
-        console.log(pedido)
-        // reset()
 
         const pedidoRef = collection(db, "pedidos")
 
@@ -37,6 +35,7 @@ export function FormularioPago({calcularTotal}){
 
     if(pedidoId){
         return <div className="checkoutContainer__mensajeCompra">
+            <h2><i className="fa-regular fa-circle-check checkoutContainer__check"></i></h2>
             <h2>¡Muchas gracias por tu compra!</h2>
             <h3>El id de tu pedido es: {pedidoId}</h3>
             <Link to={'/'}><button className="checkoutContainer__volverBtn" onClick={borrarPedidoId}>Volver</button></Link>

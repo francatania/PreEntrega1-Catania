@@ -12,7 +12,7 @@ export function Checkout(){
     const calcularTotal = () =>{
         return carrito.reduce((acc, item) => acc += item.cantidad * item.precio, 0)
     }
-
+    
 
     return <div className="checkoutContainer">
         <div className="checkoutContainer__ruta">

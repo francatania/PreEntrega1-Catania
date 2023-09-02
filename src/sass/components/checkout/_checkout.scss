@@ -36,13 +36,11 @@
     &__formulario{
         @include mixins.display-flex-column(space-around);
         gap: 2rem;
-        // background-color: aqua;
         width: 50%;
         height: 80%;
         overflow: hidden;
     }
     &__contacto,&__datosTarjeta{
-        // background-color: red;
         @include mixins.display-flex-column(center);
         gap: 2rem;
     }
@@ -97,6 +95,10 @@
         h3{
             font-size: 0.8rem;
         }
+    }
+    &__check{
+        font-size: 3rem;
+        color: green;
     }
     &__volverBtn{
         height: 2rem;

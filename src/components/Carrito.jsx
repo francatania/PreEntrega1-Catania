@@ -30,8 +30,8 @@ export function Carrito(){
                 <div className="carritoMain__carritoContainer">
                     <div className="carritoMain__filasContainer">
                         { carrito.map((producto)=>{                        
-                            return ( <div className="carritoMain__wrapper">
-                                        <div className="carritoMain__itemDescripcion" key={producto.id}>
+                            return ( <div className="carritoMain__wrapper"key={producto.id}>
+                                        <div className="carritoMain__itemDescripcion" >
                                             <img src={producto.img} alt="" className="carritoMain__imgItem" />
                                             <div className="carritoMain__nombreYCantidad">
                                                 <h3 className="carritoMain__nombreProducto">{producto.nombre}</h3>
@@ -46,7 +46,7 @@ export function Carrito(){
                                                 <h3 className="carritoMain__precio">$ {producto.precio * producto.cantidad}</h3>
                                             </div>
                                         </div>
-                                        <div className="separador"></div>
+                                        <div className="separador" key={producto.id}></div>
                                     </div>)
                         })}
                     </div>
