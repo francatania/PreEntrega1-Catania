@@ -17,7 +17,6 @@
         @include mixins.display-flex(center);
         gap: 2rem;
         
-        
     }
     &__hombreContainer,&__mujerContainer{
         width: 50%;
@@ -66,18 +65,18 @@
 
     &__h3{
         position: absolute;
-        top: 50%;
+        top: 90%;
         right: 10%;
         z-index: 9999;
         font-size: 3rem;
         font-weight: 300;
-        // font-style: italic;
         color: variables.$colorMainTittle;
         transition: all 0.5s ease;
     }
     &__h3verTodo{
         right: 0;
         left: 0;
+        top: 50%;
         text-align: center;
     }
 
@@ -86,9 +85,29 @@
         filter: brightness(60%);
         cursor: pointer;
     }
-    &__hombreContainer:hover,&__mujerContainer:hover,&__mostrarTodoContainer:hover{
+    &__hombreContainer:hover,&__mujerContainer:hover{
         h3{
-            top: 45%;}
+            top: 80%;}
+    }
+    &__mostrarTodoContainer:hover{
+        h3{
+            top: 45%;
+        }
     }
 
+    @media screen and (max-height:800px){
+        &__container{
+            height: 60rem;
+        }
+        &__modelos{
+            height: 40rem;
+            // margin-top: -10rem;
+        }
+        &__mostrarTodoContainer{
+            height: 15rem;
+        }
+        &__h3{
+            font-size: 2rem;
+        }
+    }
 }

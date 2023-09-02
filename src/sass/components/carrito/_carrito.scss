@@ -24,8 +24,6 @@
         height: 40rem;
         margin: auto;
         margin-top: 1rem;
-        // border: solid 2px black;
-        // border-radius: 1rem;
         background-color: variables.$colorMainTittle;
     }
     &__wrapper{
@@ -81,6 +79,24 @@
     }
     &__vacio{
         display: none;
+    }
+    @media screen and (max-height:700px){
+        &__tituloCarrito{
+            font-size: 1.2rem;
+        }
+        &__carritoContainer{
+            width: 70%;
+            height: 26rem;
+        }
+        &__filasContainer{
+            height: 70%;
+        }
+        &__wrapper{
+            height: 8rem;
+        }
+        &__itemDescripcion{
+            height: 6rem;
+        }
     }
 
 }

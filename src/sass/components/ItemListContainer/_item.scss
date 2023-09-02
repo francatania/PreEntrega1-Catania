@@ -40,4 +40,37 @@
             cursor: pointer;
         }
     }
+
+}
+
+@media screen and (max-height:700px){
+    .card{
+        height: 26rem;
+        width: 14rem;
+        &__imgContainer{
+            height: 73%;
+        }
+        &__nameProduct{
+            font-size: 1rem;
+        }
+        &__priceProduct{
+            font-weight: bold;
+            font-size: 1rem
+        }
+        &__financing{
+            font-size: 0.8rem
+        }
+        &__actions{
+            @include mixins.display-flex(space-around);
+            button{
+                background-color: variables.$colorMain-lighter;
+                color: variables.$colorMainTittle;
+                height:2rem;
+                width: 4rem;
+                border-radius: 20%;
+                cursor: pointer;
+            }
+            // margin-top: 0.4rem;
+        }
+    }
 }

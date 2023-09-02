@@ -19,7 +19,7 @@
         }
         padding-bottom: 1rem;
     }
-    &__formularioContainer{
+    &__brief{
         height: 70%;
         width: 70%;
         margin-bottom: 10rem;
@@ -29,6 +29,9 @@
     &__carritoFormulario{
         width: 50%;
         height: 80%;
+    }
+    &__nombreYCantidad, &__precio{
+        font-size: 0.7rem;
     }
     &__formulario{
         @include mixins.display-flex-column(space-around);
@@ -93,6 +96,26 @@
         gap: 2rem;
         h3{
             font-size: 0.8rem;
+        }
+    }
+    &__volverBtn{
+        height: 2rem;
+        width: 4rem;
+        background-color: variables.$colorMain;
+        color: variables.$colorMainTittle;
+        border: solid 1px black;
+        transition: 0.5s ease;
+    }
+    &__volverBtn:hover{
+        cursor: pointer;
+        background-color: variables.$colorMainTittle;
+        color: variables.$colorMain;
+    }
+
+    @media screen and (max-height:800px){
+        height: 50rem;
+        &__brief{
+            height: 65%;
         }
     }
 }

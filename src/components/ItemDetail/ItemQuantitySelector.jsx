@@ -1,6 +1,6 @@
 
 
-export function ItemCount ({cantidad, sumar, restar}){
+export function ItemQuantitySelector ({cantidad, sumar, restar}){
 
 
     return <div className="contadorContainer">

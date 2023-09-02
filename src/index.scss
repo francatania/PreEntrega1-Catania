@@ -4,3 +4,13 @@
 
 /* base */
 @use './sass/base/resets';
+
+body{
+    padding-top: 6.5rem;
+}
+
+@media screen and (max-height:800px) {
+    body{
+        padding-top: 5rem;
+    }
+}

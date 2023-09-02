@@ -1,11 +1,7 @@
-import { useContext, useEffect, useState } from "react"
-import { CartContext } from "../context/CartContext"
-import { Link } from "react-router-dom"
-import { FormularioPago } from "./FormularioPago"
+import { CartContext } from "../../context/CartContext"
+import { useContext, useState, useEffect } from "react"
 
-
-export function Checkout(){
-
+export function Brief(){
     const {carrito} = useContext(CartContext)
     const [carritoVacio, setCarritoVacio] = useState(false)
 
@@ -21,22 +17,19 @@ export function Checkout(){
         carritoEstaVacio()
     }, [carrito])
 
-    return <div className="checkoutContainer">
-        <div className="checkoutContainer__ruta">
-            <h3><Link to={'/carrito'}><a href="">Carrito {'>>'}</a></Link> <span>Pago</span> </h3>
-        </div>
-        <div className="checkoutContainer__formularioContainer">
+    return <>
+        
             <div  className={ carritoVacio ? "checkoutContainer__vacio" : "checkoutContainer__carritoFormulario"  } >
                 <div className="carritoMain__filasContainer checkoutContainer__filasContainer">
                         { carrito.map((producto)=>{                        
                             return ( <div className="carritoMain__wrapper" key={producto.id}>
                                         <div className="carritoMain__itemDescripcion" >
                                             <img src={producto.img} alt="" className="carritoMain__imgItem" />
-                                            <div className="carritoMain__nombreYCantidad">
+                                            <div className="carritoMain__nombreYCantidad checkoutContainer__nombreYCantidad">
                                                 <h3 className="carritoMain__nombreProducto">{producto.nombre} x {producto.cantidad}</h3>
 
                                             </div>
-                                            <div className="carritoMain__eliminarYPrecio">
+                                            <div className="carritoMain__eliminarYPrecio checkoutContainer__precio">
                                                 <h3 className="carritoMain__precio">$ {producto.precio * producto.cantidad}</h3>
                                             </div>
                                         </div>
@@ -48,8 +41,7 @@ export function Checkout(){
                         <div className="accionesCarrito__totales">TOTAL: $ {calcularTotal()}</div>
                     </div>   
             </div>
-            <FormularioPago calcularTotal = {calcularTotal()}/>
-        </div>
-       
-    </div>
+            
+            </>
+    
 }

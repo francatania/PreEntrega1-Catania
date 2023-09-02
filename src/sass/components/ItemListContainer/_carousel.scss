@@ -45,8 +45,8 @@
     &__ofertas{
         font-family: variables.$fuente;
         color: variables.$colorMainTittle;
-        text-shadow: 2px 1px black;
-        font-size: 3rem;
+        text-shadow: 1px 1px black;
+        font-size: 2.5rem;
         position: absolute;
         top: -1000%;
         right: 10%;
@@ -57,5 +57,11 @@
         opacity: 1;
         top: 43%;
         // transition: 1s all;
+    }
+
+    @media screen and (max-height:800px){
+        &__ofertas{
+            font-size: 2rem;
+        }
     }
   }

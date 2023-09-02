@@ -65,11 +65,24 @@
         border-radius: 5px;
     }
     @media screen and (max-height:800px){
+        height: 35rem;
         &__imgContainer, &__description{
-            height: 35rem;
+            height: 30rem;
         }
         &__name{
             font-size: 1.5rem;
+        }
+        &__price{
+            font-size: 1.2rem;
+        }
+        &__financing{
+            font-size: 0.9rem
+        }
+        &__colores,&__talles{
+            height: 2rem;
+        }
+        &__talles{
+            margin-top: 1rem;
         }
     }
 }

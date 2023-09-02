@@ -1,8 +1,8 @@
 import { useContext, useState } from "react"
-import { CartContext, CartProvider } from "../context/CartContext"
+import { CartContext, CartProvider } from "../../context/CartContext"
 import { useForm } from "react-hook-form"
 import { collection, addDoc } from "firebase/firestore"
-import { db } from "../firebase/firebase"
+import { db } from "../../firebase/firebase"
 import { Link } from "react-router-dom"
 
 
@@ -39,7 +39,7 @@ export function FormularioPago({calcularTotal}){
         return <div className="checkoutContainer__mensajeCompra">
             <h2>¡Muchas gracias por tu compra!</h2>
             <h3>El id de tu pedido es: {pedidoId}</h3>
-            <Link to={'/'}><button onClick={borrarPedidoId}>Volver</button></Link>
+            <Link to={'/'}><button className="checkoutContainer__volverBtn" onClick={borrarPedidoId}>Volver</button></Link>
         </div>
     }
 

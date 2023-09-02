@@ -4,7 +4,7 @@
 .accionesCarrito{
     width: 70%;
     margin: auto;
-    height: 7rem;
+    height: 4rem;
     @include mixins.display-flex-column2(center, end);
     font-size: 1rem;
     gap: 2rem;
@@ -13,7 +13,7 @@
         margin-right: 0.2rem;
     }
     &__comprar{
-        height: 4rem;
+        height: 3rem;
     }
     &__comprarBtn{
         height: 100%;
@@ -30,5 +30,13 @@
     }
     &__vacio{
         display: none;
+    }
+    @media screen and (max-height:700px){
+        gap: 0;
+        padding-top: 2rem;
+        &__comprarBtn{
+            margin-top: 1rem;
+            height: 80%;
+        }
     }   
 }
