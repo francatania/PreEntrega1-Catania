@@ -51,18 +51,18 @@ export function FormularioPago({calcularTotal}){
                     <input type="text" id="apellido" name="apellido" placeholder="Apellido" required {...register("Apellido")}/>
                 </div>
                 <div className="checkoutContainer__datosContacto checkoutContainer__campos">
-                    <input type="email" id="email" name="email" placeholder="Email" required {...register("Email")}/>
+                    <input type="email" id="email" name="email" placeholder="Email" required value="ejemplo@hotmail.com" {...register("Email")}/>
 
-                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required {...register("Telefono")}/>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required value={4512321} {...register("Telefono")}/>
                 </div>
             </div>
             
             <div className="checkoutContainer__datosTarjeta">
                 <h3>Datos tarjeta</h3>
                 <div className="checkoutContainer__tarjeta checkoutContainer__campos">
-                    <input type="text" id="tarjeta" name="tarjeta" placeholder="Número de Tarjeta" required {...register("Tarjeta")}/>
+                    <input type="text" id="tarjeta" name="tarjeta" placeholder="Número de Tarjeta" required value={111122223333} {...register("Tarjeta")}/>
 
-                    <input type="text" id="codigo" name="codigo" placeholder="Código seguridad"  required {...register("Codigo")}/>
+                    <input type="text" id="codigo" name="codigo" placeholder="Código seguridad"  required value={123} {...register("Codigo")}/>
                 </div>
                 <div className="checkoutContainer__fechaVencimientoYCuotas checkoutContainer__campos">
                     <div className="checkoutContainer__fechaVencimiento">
@@ -104,9 +104,9 @@ export function FormularioPago({calcularTotal}){
                     <div className="checkoutContainer__cuotas">
                         <select id="cuotas" name="cuotas" required {...register("Cuotas")}>
                             <option value="" disabled selected>Cuotas</option>
-                            <option value="1">x1 ${calcularTotal}</option>
-                            <option value="3">x3 ${(calcularTotal)/3}</option>
-                            <option value="6">x6 ${(calcularTotal)/6}</option>
+                            <option value="1">x1 ${calcularTotal.toFixed(2)}</option>
+                            <option value="3">x3 ${((calcularTotal)/3).toFixed(2)}</option>
+                            <option value="6">x6 ${((calcularTotal)/6).toFixed(2)}</option>
                         </select>
                     </div>
 

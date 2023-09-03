@@ -16,7 +16,17 @@ export const ItemList = () =>{
     const [isLoading, setIsLoading] = useState(true)
     const categoria = useParams()
     
+    const scrollToNav = () =>{
+        const navbar = document.getElementById('navbar')
+        window.scrollTo({
+            top: navbar.offsetTop,
+            behavior: 'smooth'
+        })
+    }
 
+    useEffect(()=>{
+        scrollToNav()
+    },[])
 
     useEffect(()=>{
         

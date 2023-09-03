@@ -10,6 +10,18 @@ export function ItemListGender(){
     const [isLoading, setIsLoading] = useState(true)
     const [prendas, setPrendas] = useState([])
     const genero = useParams()
+    
+    const scrollToNav = () =>{
+        const navbar = document.getElementById('navbar')
+        window.scrollTo({
+            top: navbar.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+
+    useEffect(()=>{
+        scrollToNav()
+    },[])
 
     useEffect(()=>{
 

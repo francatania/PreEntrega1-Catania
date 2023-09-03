@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom"
 
 export const Navbar = () =>{
     const parametros = useParams()
-    return <nav className="nav">
+    return <nav className="nav" id="navbar">
                 <div className="nav__navWidth">
                     <Link to={'/'} >
                         <div className="nav__brandNameContainer">
