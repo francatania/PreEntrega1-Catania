@@ -57,8 +57,46 @@
     &__filtrosContainer{
         background-color: variables.$colorNav;
         height: 35%;
-        @include mixins.display-flex(center)
+        @include mixins.display-flex(center);
+        @media screen and (max-width:750px) {
+            position: absolute;
+            left: -700px;
+            top: 180px;
+        }
+        transition: all 0.3s;
     }
+    &__filtrosContainer-active{
+        // right: 0;
+        left: 0;
+        background-color: transparent;
+    }
+    &__listaNav-active{
+        @media screen and (max-width:750px) {
+            @include mixins.display-flex-column(start);
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            color: variables.$colorNav;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        // height: 4rem;
+        &__navWidth{
+            width: 90%;
+            // margin: auto;
+        }
+        &__brandNameContainer{
+            font-size: 1.9rem;
+        }
+    }
+
+    @media screen and (max-width:750px) {
+        &__itemLista{
+            border: 2px white solid;
+        }
+    }
+
     @media screen and (max-height:800px) {
         height: 5rem;
         border-bottom: solid 2px variables.$colorMain;
