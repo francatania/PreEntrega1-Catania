@@ -15,7 +15,7 @@
         background-color: transparent;
     }
     &__listaNav{
-        @include mixins.display-flex-column(start);
+        @include mixins.display-flex-column(center);
         gap: 2rem;
         position: absolute;
         left: -300px;
@@ -27,7 +27,7 @@
     }
     &__h3{
         color: white;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-style: italic;
     }
 }
