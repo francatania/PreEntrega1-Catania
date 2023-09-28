@@ -53,6 +53,9 @@
         margin: auto;
         border-radius: 40%;
         background-color: variables.$colorGris;
+        @media screen and (max-width:750px) {
+            display: none;
+        }
     } 
     &__filtrosContainer{
         background-color: variables.$colorNav;

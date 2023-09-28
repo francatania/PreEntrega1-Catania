@@ -14,7 +14,7 @@ export function Footer(){
                 </div>
                 <div className="footerContainer__ubicacion">
                     <i className="fa-solid fa-map-location-dot"></i>
-                    <h4 className="footerContainer__direccion" > Calle 1200</h4>
+                    <h4 className="footerContainer__direccion" >Babon 123</h4>
                 </div>
             </div>
         </div>

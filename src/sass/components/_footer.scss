@@ -6,14 +6,20 @@
     background-color: variables.$colorGris;
     @include mixins.display-flex-column(center);
     // gap: 2rem;
+    @media screen and (max-width:750px) {
+        gap: 1rem;
+    }
     &__brandFooter{
         font-size: 2rem;
+        @media screen and (max-width:750px) {
+            font-size: 1.5rem;
+        }
     }
     &__redesYContacto{
         @include mixins.display-flex(center);
         width: 20rem;
         height: 5rem;
-        gap: 2rem
+        gap: 2rem;
     }
     &__contacto{
         @include mixins.display-flex-column(center);
@@ -45,5 +51,10 @@
         scale: 1.1;
         color: variables.$colorMain;
         cursor: pointer;
+    }
+    &__copyright{
+        @media screen and (max-width:750px) {
+            font-size: 0.8rem;
+        }
     }
 }

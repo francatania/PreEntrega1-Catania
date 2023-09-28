@@ -75,6 +75,10 @@
         font-weight: 300;
         color: variables.$colorMainTittle;
         transition: all 0.5s ease;
+        @media screen and (max-width:900px) {
+            font-size: 2.5rem;
+        }
+
     }
     &__h3verTodo{
         right: 0;
