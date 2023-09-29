@@ -7,6 +7,7 @@ import { pedirDatosCategoria } from "../datos/pedirDatos"
 import { useParams } from "react-router-dom"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../firebase/firebase"
+import ClipLoader from "react-spinners/ClipLoader";
 
 
 export const ItemList = () =>{
@@ -41,13 +42,30 @@ export const ItemList = () =>{
                         return {...prod.data(), id: prod.id}
                     })
                 )
-                setIsLoading(false)
+                setTimeout(()=>{
+                    setIsLoading(false)
+                },400)
+                
             })
     },[categoria])
 
+
+    const override = {
+        display: "flex",
+        justifyContent: "center", 
+        alignItems: "center",     
+        height: "100vh",          
+    };
+
     return(<>
     {isLoading ? <div className="itemList itemList__loading">
-        <h2>Cargando...</h2>
+    <h3>Cargando</h3>
+    <ClipLoader
+        color={'#3e2f5b'}
+        loading={isLoading}
+        css={override}
+        size={30}
+      />
     </div>:
     <div className="itemListContainer">
             <div className="itemList">
