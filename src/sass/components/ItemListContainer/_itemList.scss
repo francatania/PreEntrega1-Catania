@@ -12,7 +12,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     justify-items: center;
-    
+    &__itemList-search{
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
     &__loading{
         @include mixins.display-flex(center);
         height: 100vh;

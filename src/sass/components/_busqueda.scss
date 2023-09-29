@@ -11,6 +11,9 @@
         color: variables.$colorMainTittle;
         margin-top: 2rem;
         font-size: 1.5rem;
+        @media screen and (max-width:750px) {
+            font-size: 1rem;
+        }
     }
     &__notFoundContainer{
         height: 10rem;
@@ -18,8 +21,15 @@
         top: 30%;
         padding: 2rem;
         border-radius: 2rem;
-        @include mixins.display-flex(center);
+        @include mixins.display-flex-column(center);
         background-color: variables.$colorMainTittle;
         color: variables.$colorMain;
+        @media screen and (max-width:750px) {
+            height: 20rem;
+            width: 80%;
+            border-radius: 1rem;
+            padding: 0;
+            font-size: 0.8rem;
+        }
     }
 }
