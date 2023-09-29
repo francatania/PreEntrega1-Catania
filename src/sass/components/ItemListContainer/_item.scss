@@ -47,6 +47,16 @@
     .card{
         height: 36rem;
         width: 20rem;
+        &__nameProduct{
+            font-size: 1.2rem;
+        }
+        &__actions{
+            button{
+                height:2.3rem;
+                width: 4.3rem;
+                border-radius: 20%;
+            }
+        }
     }   
 }
 
@@ -60,6 +70,7 @@
         &__nameProduct{
             font-size: 1.2rem;
         }
+
         &__priceProduct{
             font-weight: bold;
             font-size: 1rem
