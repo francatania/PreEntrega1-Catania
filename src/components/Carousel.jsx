@@ -2,16 +2,18 @@ import { useEffect, useState } from 'react'
 
 export function Carousel (props){
     const images =['/img/carousel/maincall1.jpg','/img/carousel/maincall2.jpg','/img/carousel/maincall3.jpg']
+    const imagesMobile = ['/img/carousel/portada6.jpg', '/img/carousel/portada4.jpg', '/img/carousel/portada5.jpg']
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [selectedImage, setSelectedImage] = useState(images[0])
     const [loaded, setLoaded] = useState(true)
     const [oferta, setOferta] = useState(props.ofertas[0])
     const [ofertaLoaded, setOfertaLoaded] = useState(false)
+    const [mobileView, setMobileView] = useState(false)
 
 
     useEffect(()=>{
         const interval = setInterval(()=>{
-            selectNewImage(selectedIndex, images)
+            mobileView ? selectNewImage(selectedIndex, imagesMobile) : selectNewImage(selectedIndex, images)
         }, 5000)
         return () => clearInterval(interval)
     })
@@ -21,6 +23,22 @@ export function Carousel (props){
             setOfertaLoaded(true)
         }, 500)
     },[])
+
+    useEffect(()=>{
+        const handleResize = ()=>{
+            const isMobile = window.innerWidth < 750;
+            setMobileView(isMobile);
+        }
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () =>{
+            window.removeEventListener('resize', handleResize);
+        }
+
+    }, [])
 
     const switchOferta = (index) =>{
         setOferta(props.ofertas[index])
@@ -41,11 +59,11 @@ export function Carousel (props){
     }    
 
     const previous = () =>{
-        selectNewImage(selectedIndex, images, false)
+        mobileView ?  selectNewImage(selectedIndex, imagesMobile, false) : selectNewImage(selectedIndex, images, false)
     }
 
     const next = () =>{
-        selectNewImage(selectedIndex, images, true)
+        mobileView ? selectNewImage(selectedIndex, imagesMobile, true) : selectNewImage(selectedIndex, images, true)
     }
 
     return <div className='containerImg'>

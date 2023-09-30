@@ -19,7 +19,6 @@ export const Navbar = () =>{
         const handleResize = ()=>{
             const isMobile = window.innerWidth < 750;
             setMobileView(isMobile);
-            isMobile && console.log("aaaaaaaaaaa")
         }
 
         window.addEventListener('resize', handleResize);

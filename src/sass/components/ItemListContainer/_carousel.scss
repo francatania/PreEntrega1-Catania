@@ -8,7 +8,7 @@
     overflow: hidden;
     position: relative;
     @media screen and (max-width:750px) {
-        height: 80vh;
+        height: 60vh;
     }
     &__img{
         height: 100%;
@@ -58,15 +58,25 @@
             font-size: 1.2rem;
             top: 40%;
             left: -1000px;
+            border-radius: 0.5rem;
+            height: 7rem;
+            padding: 1rem;
+            width: 80%;
         }
     }
     &__activeOfertas{
         opacity: 1;
         top: 43%;
+        
         @media screen and (max-width:750px) {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             left: 10%;
             top: 40%;
+            // border: solid 1px black;
+            background-color: rgba(0, 0, 0, 0.137);
+            border-radius: 0.5rem;
+            height: 7rem;
+            padding: 1rem;
         }
     }
 
