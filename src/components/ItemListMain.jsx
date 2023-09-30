@@ -4,15 +4,17 @@ export function ItemListMain(){
     return <div className="itemListMain">
         <div className="itemListMain__container">
             <div className="itemListMain__modelos">
+
+                <div className="itemListMain__mujerContainer">
+                <h3 className="itemListMain__h3">Mujer</h3>
+                    <Link to={'/mujer'}><div className="itemListMain__mujer"></div></Link>
+                </div>
+
                 <div className="itemListMain__hombreContainer">
                     <h3 className="itemListMain__h3">Hombre</h3>
                     <Link to={'/hombre'}><div className="itemListMain__hombre"></div></Link>
                         
                     
-                </div>
-                <div className="itemListMain__mujerContainer">
-                <h3 className="itemListMain__h3">Mujer</h3>
-                    <Link to={'/mujer'}><div className="itemListMain__mujer"></div></Link>
                 </div>
             </div>
             
