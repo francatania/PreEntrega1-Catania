@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export function Carousel (props){
     const images =['/img/carousel/maincall1.jpg','/img/carousel/maincall2.jpg','/img/carousel/maincall3.jpg']
-    const imagesMobile = ['/img/carousel/portada6.jpg', '/img/carousel/portada4.jpg', '/img/carousel/portada5.jpg']
+    const imagesMobile = ['/img/carousel/maincall3.jpg', '/img/carousel/portada4.jpg', '/img/carousel/portada5.jpg']
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [selectedImage, setSelectedImage] = useState(images[0])
     const [loaded, setLoaded] = useState(true)
