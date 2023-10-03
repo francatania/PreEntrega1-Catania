@@ -17,9 +17,10 @@
         border-top-left-radius: 2rem;
         @media screen and (max-width:750px) {
             width: 80%;
-            height: 20rem;
+            height: 22rem;
             @include mixins.display-flex
-            (center); 
+            (center);
+            border-bottom: 1px solid variables.$colorMain; 
         }
     }
     &__imgMain{
