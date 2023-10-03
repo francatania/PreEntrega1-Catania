@@ -9,6 +9,9 @@
         @include mixins.display-flex(space-around);
         width: 100%;
         margin-top: 2rem;
+        @media screen and (max-width:750px) {
+            margin-top: 0;
+        }
     }
     &__restar, &__sumar{
         height: 2rem;
@@ -29,6 +32,10 @@
         color: variables.$colorMainTittle;
         cursor: pointer;
         transition: 0.5s;
+        @media screen and (max-width:750px) {
+            height: 5rem;
+            margin-bottom: 1rem;
+        }
     }
     &__restar:hover, &__sumar:hover{
         transition: 0.5s;
@@ -40,4 +47,5 @@
         background-color: variables.$colorMain;
         color: variables.$colorMainTittle;
     }
+
 }
