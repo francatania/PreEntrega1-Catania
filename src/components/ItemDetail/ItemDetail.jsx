@@ -21,6 +21,18 @@ export function ItemDetail({item, loading}){
     }, [item])
 
 
+    const scrollToNav = () =>{
+        const navbar = document.getElementById('navbar')
+        window.scrollTo({
+            top: navbar.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+
+    useEffect(()=>{
+        scrollToNav()
+    },[])
+
 
     const [cantidad, setCantidad] = useState(1)
 
