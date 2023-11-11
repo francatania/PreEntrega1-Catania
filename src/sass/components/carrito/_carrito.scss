@@ -19,6 +19,7 @@
         @include mixins.display-flex(start);
         @media screen and (max-width: 700px) {
             width: 100%;
+            font-size: 1rem;
             @include mixins.display-flex(center);
         }
     }

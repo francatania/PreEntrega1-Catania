@@ -4,7 +4,9 @@ import { CartContext } from "../../context/CartContext"
 import { AddItemButton } from "./AddItemButton"
 import { Description } from "./Description"
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 export function ItemDetail({item, loading}){
 
@@ -17,6 +19,8 @@ export function ItemDetail({item, loading}){
     useEffect(()=>{
         setImgDetal(item.img)
     }, [item])
+
+
 
     const [cantidad, setCantidad] = useState(1)
 
@@ -43,11 +47,24 @@ export function ItemDetail({item, loading}){
             });
     }
 
-    
+    const override = {
+        display: "flex",
+        justifyContent: "center", 
+        alignItems: "center",     
+        height: "100vh",          
+    };
 
     return (<>
-            { isLoading ? <div className="detailContainer"><div>Cargando</div> </div>:
-            <div className="detailContainer">
+                {isLoading ? <div className="itemList itemList__loading">
+                    <h3>Cargando</h3>
+                    <ClipLoader
+                        color={'#3e2f5b'}
+                        loading={isLoading}
+                        css={override}
+                        size={30}
+                    />
+                    </div>:
+            <div className="detailContainer" >
                 <div className="detailContainer__imgContainer">
                     <div className="detailContainer__imgMain"><img src={imgDetail} alt="" /></div>
                     <div className="detailContainer__imgSelect">
