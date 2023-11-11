@@ -4,6 +4,10 @@ import { useForm } from "react-hook-form"
 import { collection, addDoc } from "firebase/firestore"
 import { db } from "../../firebase/firebase"
 import { Link } from "react-router-dom"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 
 
@@ -11,41 +15,82 @@ export function FormularioPago({calcularTotal}){
     const {carrito, vaciarCarrito} = useContext(CartContext)
     const {register, handleSubmit, reset} = useForm()
     const [pedidoId, setPedidoId] = useState("")
+    const [isLoading, setIsLoading] = useState(false)
 
+    
+    const override = {
+        display: "flex",
+        justifyContent: "center", 
+        alignItems: "center",     
+        height: "100vh",          
+    };
 
     const enviar = (data) =>{
-        const pedido = {
-            cliente: data,
-            productos: carrito,
-            total: calcularTotal
-        }
+        setIsLoading(true);
 
-        const pedidoRef = collection(db, "pedidos")
+        setTimeout(()=>{
+            const pedido = {
+                cliente: data,
+                productos: carrito,
+                total: calcularTotal
+            }
+    
+            const pedidoRef = collection(db, "pedidos")
+    
+            addDoc(pedidoRef, pedido)
+                .then((doc) =>{
+                    setPedidoId(doc.id)
+                    vaciarCarrito()
+                    setIsLoading(false);
+                })
+        }, 1200)
 
-        addDoc(pedidoRef, pedido)
-            .then((doc) =>{
-                setPedidoId(doc.id)
-                vaciarCarrito()
-            })
     }
 
     const borrarPedidoId = () =>{
         setPedidoId("")
     }
 
+
+    const showSwal = () => {
+        const MySwal = withReactContent(Swal);
+        const pedidoIdValue = pedidoId;
+        MySwal.fire({
+          title: '¡Muchas gracias por tu compra!',
+          text: `El id de tu pedido es: ${pedidoIdValue}`,
+          icon: "success"
+        }).then(()=>{
+            borrarPedidoId();
+            window.location.href = '/';
+        });
+      };
+
     if(pedidoId){
+        showSwal();
         return <div className="checkoutContainer__mensajeCompra">
-            <h2><i className="fa-regular fa-circle-check checkoutContainer__check"></i></h2>
-            <h2>¡Muchas gracias por tu compra!</h2>
-            <h3>El id de tu pedido es: {pedidoId}</h3>
-            <Link to={'/'}><button className="checkoutContainer__volverBtn" onClick={borrarPedidoId}>Volver</button></Link>
-        </div>
+                    {/* <h2><i className="fa-regular fa-circle-check checkoutContainer__check"></i></h2>
+                    <h2>¡Muchas gracias por tu compra!</h2>
+                    <h3>El id de tu pedido es: {pedidoId}</h3> */}
+                    {/* <Link to={'/'}><button className="checkoutContainer__volverBtn" onClick={borrarPedidoId}>Volver</button></Link> */}
+                </div>
     }
 
-    return <form action="" className="checkoutContainer__formulario" onSubmit={handleSubmit(enviar)}>
+    return (
+        <>
+    {isLoading ? <div className="itemList itemList__loading">
+    <h3>Cargando</h3>
+    <ClipLoader
+        color={'#3e2f5b'}
+        loading={isLoading}
+        css={override}
+        size={30}
+      />
+    </div>:
+    <form action="" className="checkoutContainer__formulario" onSubmit={handleSubmit(enviar)}>
             <div className="checkoutContainer__contacto">
                 <h3>Datos de contacto</h3>
                 <div className="checkoutContainer__nombres checkoutContainer__campos">
+                    
                     <input type="text" id="nombre" name="nombre" required placeholder="Nombre" {...register("nombre")}/>
 
                     <input type="text" id="apellido" name="apellido" placeholder="Apellido" required {...register("Apellido")}/>
@@ -116,6 +161,7 @@ export function FormularioPago({calcularTotal}){
                 <button type="submit">Comprar</button>
             </div>
 
-            </form>
+            </form>}
+            </>)
          
 }

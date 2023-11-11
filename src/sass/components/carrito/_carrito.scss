@@ -16,7 +16,11 @@
         color: variables.$colorMainTittle;
         margin-top: 1rem;
         width: 70%;
-        @include mixins.display-flex(start)
+        @include mixins.display-flex(start);
+        @media screen and (max-width: 700px) {
+            width: 100%;
+            @include mixins.display-flex(center);
+        }
     }
     &__carritoContainer{
         width: 70%;
@@ -25,11 +29,29 @@
         margin: auto;
         margin-top: 1rem;
         background-color: variables.$colorMainTittle;
+        @media screen and (max-width: 700px) {
+            width: 95%;
+        }
+        @media screen and (max-height: 750px) {
+            height: 35rem;
+
+        }
+    }
+    &__filasContainer{
+        height: 80%;
+        overflow-x: hidden;
+        @media screen and (max-width: 700px) {
+            width: 100%;
+        }
+
     }
     &__wrapper{
         @include mixins.display-flex-column(center);
         height: 10rem;
         overflow: hidden;
+        @media screen and (max-width: 700px) {
+            width: 100%;
+        }
     }
     
     &__itemDescripcion{
@@ -39,6 +61,9 @@
         margin: auto;
         margin-top: .5rem;
         margin-bottom: .5rem;
+        @media screen and (max-width: 700px) {
+            width: 100%;
+        }
     }
     &__imgItem{
         height: 100%;
@@ -73,10 +98,7 @@
         transition: 0.5s;
         border: 2px variables.$colorMain solid;
     }
-    &__filasContainer{
-        height: 80%;
-        overflow-x: hidden;
-    }
+
     &__vacio{
         display: none;
     }
@@ -85,8 +107,8 @@
             font-size: 1.2rem;
         }
         &__carritoContainer{
-            width: 70%;
-            height: 26rem;
+            // width: 70%;
+            height: 35rem;
         }
         &__filasContainer{
             height: 70%;
