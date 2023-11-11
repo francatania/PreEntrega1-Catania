@@ -25,8 +25,17 @@ export function FormularioPago({calcularTotal}){
         height: "100vh",          
     };
 
+    const scrollToForm = () =>{
+        const form = document.getElementById('form')
+        window.scrollTo({
+            top: form.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+
     const enviar = (data) =>{
         setIsLoading(true);
+        scrollToForm();
 
         setTimeout(()=>{
             const pedido = {
@@ -86,7 +95,7 @@ export function FormularioPago({calcularTotal}){
         size={30}
       />
     </div>:
-    <form action="" className="checkoutContainer__formulario" onSubmit={handleSubmit(enviar)}>
+    <form action="" id="form" className="checkoutContainer__formulario" onSubmit={handleSubmit(enviar)}>
             <div className="checkoutContainer__contacto">
                 <h3>Datos de contacto</h3>
                 <div className="checkoutContainer__nombres checkoutContainer__campos">

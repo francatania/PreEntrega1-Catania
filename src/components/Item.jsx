@@ -21,7 +21,7 @@ export const Item = ({img, img2, nombre, precio, id, agregar }) =>{
         agregar()
         toast.success('Agregado!', {
             position: "top-right",
-            autoClose: 1000,
+            autoClose: 200,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
