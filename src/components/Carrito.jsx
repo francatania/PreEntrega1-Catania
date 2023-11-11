@@ -21,6 +21,17 @@ export function Carrito(){
         return carrito.reduce((acc, item) => acc += item.cantidad * item.precio, 0)
     }
 
+    const scrollToNav = () =>{
+        const navbar = document.getElementById('navbar')
+        window.scrollTo({
+            top: navbar.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+
+    useEffect(()=>{
+        scrollToNav()
+    },[])
 
 
     return <div className="carritoMain">

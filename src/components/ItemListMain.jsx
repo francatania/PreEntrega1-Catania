@@ -1,6 +1,20 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react"
+
 
 export function ItemListMain(){
+
+    const scrollToNav = () =>{
+        const navbar = document.getElementById('navbar')
+        window.scrollTo({
+            top: navbar.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+
+    useEffect(()=>{
+        scrollToNav()
+    },[])
     return <div className="itemListMain">
         <div className="itemListMain__container">
             <div className="itemListMain__modelos">

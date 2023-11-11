@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { CartContext, CartProvider } from "../../context/CartContext"
 import { useForm } from "react-hook-form"
 import { collection, addDoc } from "firebase/firestore"
@@ -25,31 +25,38 @@ export function FormularioPago({calcularTotal}){
         height: "100vh",          
     };
 
-    const scrollToForm = () =>{
-        const form = document.getElementById('form')
+
+    const scrollToNav = () =>{
+        const navbar = document.getElementById('navbar')
         window.scrollTo({
-            top: form.offsetTop,
+            top: navbar.offsetTop,
             behavior: 'smooth'
         })
     }
 
-    const enviar = (data) =>{
-        setIsLoading(true);
-        scrollToForm();
+    useEffect(()=>{
+        scrollToNav()
+    },[])
 
+
+    const enviar = (data) =>{
+        const pedido = {
+            cliente: data,
+            productos: carrito,
+            total: calcularTotal
+        }
+        vaciarCarrito()
+        setIsLoading(true);
+        scrollToNav();
+        console.log(pedido)
         setTimeout(()=>{
-            const pedido = {
-                cliente: data,
-                productos: carrito,
-                total: calcularTotal
-            }
+
     
             const pedidoRef = collection(db, "pedidos")
     
             addDoc(pedidoRef, pedido)
                 .then((doc) =>{
                     setPedidoId(doc.id)
-                    vaciarCarrito()
                     setIsLoading(false);
                 })
         }, 1200)
@@ -86,7 +93,7 @@ export function FormularioPago({calcularTotal}){
 
     return (
         <>
-    {isLoading ? <div className="itemList itemList__loading">
+    {isLoading ? <div className="itemList itemList__loadingShopping">
     <h3>Cargando</h3>
     <ClipLoader
         color={'#3e2f5b'}
