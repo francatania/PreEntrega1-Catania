@@ -26,7 +26,8 @@
         height: 70%;
         width: 70%;
         margin-bottom: 10rem;
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
         gap: 2rem;
         background-color: variables.$colorMainTittle;
         @include mixins.display-flex(center);
@@ -51,7 +52,8 @@
         @include mixins.display-flex-column(space-around);
         gap: 2rem;
         height: 80%;
-        overflow: hidden;
+        overflow-y: scroll;
+        overflow-x: hidden;
         @media screen and (max-width: 700px) {
             overflow: hidden;
             height: 70%;
